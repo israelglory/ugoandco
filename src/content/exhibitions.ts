@@ -1,3 +1,4 @@
+import { placeholderImages } from "./placeholder-images";
 import { routes } from "./site";
 import type { ImageSlot, PageMeta, RichHeading } from "./types";
 
@@ -16,7 +17,10 @@ export const exhibitions = {
     } satisfies RichHeading,
     lede: "UGO N & Co. creates invitation-only African contemporary art exhibitions for corporations, private banks, professional firms, executive groups and other organizations seeking distinctive cultural experiences for their clients and communities.",
     cta: { label: "Discuss a Private Exhibition", href: routes.contact },
-    image: { label: "Image · Private exhibition installation" } satisfies ImageSlot,
+    image: {
+      label: "Image · Private exhibition installation",
+      image: placeholderImages.exhibitionsHero,
+    } satisfies ImageSlot,
   },
   audience: {
     emphasis:
@@ -36,7 +40,7 @@ export const exhibitions = {
       "Our role is not to present African contemporary art as a single aesthetic or narrative.",
     ],
     closing: "Instead, each exhibition is developed around individual artistic practices and a clear curatorial idea.",
-    image: { label: "Image · Artwork detail" } satisfies ImageSlot,
+    image: { label: "Image · Artwork detail", image: placeholderImages.exhibitionsDetail } satisfies ImageSlot,
   },
   experiences: {
     eyebrow: "Private Client Experiences",

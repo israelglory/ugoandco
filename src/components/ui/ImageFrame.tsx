@@ -17,7 +17,8 @@ type ImageFrameProps = {
   frame?: "right" | "left";
   /** `sizes` for the responsive image once a real photo is supplied. */
   sizes?: string;
-  priority?: boolean;
+  /** Load immediately (above-the-fold images) instead of lazily. */
+  eager?: boolean;
   className?: string;
   /** Decorative motifs (GoldRing, GoldDot) layered over the image. */
   children?: React.ReactNode;
@@ -28,8 +29,8 @@ export function ImageFrame({
   aspect,
   tone = "light",
   frame,
-  sizes = "(max-width: 1024px) 100vw, 500px",
-  priority,
+  sizes = "(max-width: 1024px) 100vw, 560px",
+  eager,
   className,
   children,
 }: ImageFrameProps) {
@@ -50,8 +51,9 @@ export function ImageFrame({
           alt={slot.image.alt}
           fill
           sizes={sizes}
-          priority={priority}
+          loading={eager ? "eager" : undefined}
           className="object-cover"
+          style={slot.image.position ? { objectPosition: slot.image.position } : undefined}
         />
       ) : (
         <div

@@ -22,5 +22,7 @@ export type ImageSlot = {
   image?: {
     src: string | StaticImageData;
     alt: string;
+    /** CSS object-position for the crop, e.g. "50% 30%". Defaults to centre. */
+    position?: string;
   };
 };

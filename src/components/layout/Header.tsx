@@ -42,7 +42,7 @@ export function Header({ name, homeLabel, navLabel, navigation, menuLabels }: He
       >
         <Container className="flex min-h-(--header-h) items-center justify-between gap-6 transition-[min-height] duration-300 ease-out motion-reduce:transition-none">
           <Link href="/" aria-label={homeLabel} className="flex items-center gap-3.5 text-ink">
-            <Monogram width={48} priority />
+            <Monogram width={48} eager />
             <span className="font-serif text-[25px] font-medium tracking-[0.06em] whitespace-nowrap">{name}</span>
           </Link>
 

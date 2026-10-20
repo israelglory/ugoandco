@@ -33,7 +33,7 @@ export default function PrivateArtPage() {
           <Body>{hero.body}</Body>
         </div>
         <div className="flex min-w-0 flex-[1_1_400px] justify-center">
-          <ImageFrame slot={hero.image} aspect="3/4" frame="right" priority className="max-w-[460px]" />
+          <ImageFrame slot={hero.image} aspect="3/4" frame="right" eager className="max-w-[460px]" />
         </div>
       </Section>
 

@@ -36,7 +36,7 @@ export default function HomePage() {
           </div>
         </div>
         <div className="flex min-w-0 flex-[1_1_420px] justify-center">
-          <ImageFrame slot={hero.image} aspect="4/5" priority className="max-w-[500px]">
+          <ImageFrame slot={hero.image} aspect="4/5" eager className="max-w-[500px]">
             <GoldRing className="-bottom-[12%] -left-[20%] w-[74%]" />
             <GoldDot className="top-[18%] -right-[5px]" />
           </ImageFrame>

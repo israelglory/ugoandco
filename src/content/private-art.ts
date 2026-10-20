@@ -1,3 +1,4 @@
+import { placeholderImages } from "./placeholder-images";
 import type { ImageSlot, PageMeta, RichHeading } from "./types";
 
 export const privateArtMeta: PageMeta = {
@@ -16,7 +17,7 @@ export const privateArt = {
     } satisfies RichHeading,
     lede: "UGO N & Co. facilitates select opportunities involving African contemporary art for collectors, corporations and private clients.",
     body: "Our role varies according to the engagement.",
-    image: { label: "Image · Artwork" } satisfies ImageSlot,
+    image: { label: "Image · Artwork", image: placeholderImages.privateArtHero } satisfies ImageSlot,
   },
   scenarios: {
     items: [
@@ -92,6 +93,6 @@ export const privateArt = {
       "Where appropriate, Ovico Gallery may participate in a UGO N & Co. exhibition or art engagement alongside other galleries, artists and cultural partners.",
     ],
     linkLabel: "Visit Ovico Gallery",
-    image: { label: "Image · Ovico Gallery" } satisfies ImageSlot,
+    image: { label: "Image · Ovico Gallery", image: placeholderImages.ovicoGallery } satisfies ImageSlot,
   },
 };

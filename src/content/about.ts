@@ -1,3 +1,4 @@
+import { placeholderImages } from "./placeholder-images";
 import { routes } from "./site";
 import type { ImageSlot, PageMeta, RichHeading } from "./types";
 
@@ -47,7 +48,7 @@ export const about = {
     ],
     closing:
       "UGO N & Co. brings together these corporate, entrepreneurial and cultural experiences within one platform.",
-    portrait: { label: "Portrait · Ugochi D. Nwoga" } satisfies ImageSlot,
+    portrait: { label: "Portrait · Ugochi D. Nwoga", image: placeholderImages.aboutPortrait } satisfies ImageSlot,
   },
   international: {
     title: "International Perspective",

@@ -6,12 +6,13 @@ import monogramLight from "@/assets/monogram-light.png";
 type MonogramProps = {
   width: number;
   tone?: "light" | "dark";
-  priority?: boolean;
+  /** Load immediately (above-the-fold images) instead of lazily. */
+  eager?: boolean;
   className?: string;
 };
 
 /** The UN monogram. Always decorative: the wordmark beside it carries the name. */
-export function Monogram({ width, tone = "light", priority, className }: MonogramProps) {
+export function Monogram({ width, tone = "light", eager, className }: MonogramProps) {
   const src = tone === "dark" ? monogramLight : monogram;
   return (
     <Image
@@ -20,7 +21,7 @@ export function Monogram({ width, tone = "light", priority, className }: Monogra
       width={width}
       height={Math.round((width * src.height) / src.width)}
       sizes={`${width}px`}
-      priority={priority}
+      loading={eager ? "eager" : undefined}
       className={cn("h-auto", className)}
     />
   );

@@ -32,7 +32,7 @@ export default function PrivateExhibitionsPage() {
           </div>
         </div>
         <div className="min-w-0 flex-[1_1_420px]">
-          <ImageFrame slot={hero.image} aspect="5/6" tone="dark" priority>
+          <ImageFrame slot={hero.image} aspect="5/6" tone="dark">
             <GoldRing className="-top-[10%] -right-[14%] w-[60%]" />
           </ImageFrame>
         </div>
