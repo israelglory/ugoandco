@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>UGO N &amp; Co. · Home</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Jost:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FAF7F0}
+*{box-sizing:border-box}
+a{color:#806128}a:hover{color:#12110F}
+.wrap{max-width:1240px;margin:0 auto;padding-left:40px;padding-right:40px}
+.serif{font-family:'Cormorant Garamond',Garamond,'Times New Roman',serif}
+.eyebrow{font-family:Jost,'Helvetica Neue',sans-serif;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:#806128;font-weight:500;margin:0}
+.h1{font-family:'Cormorant Garamond',Garamond,serif;font-weight:400;color:#12110F;margin:0;line-height:1.03;letter-spacing:-.01em;text-wrap:balance}
+.h2{font-family:'Cormorant Garamond',Garamond,serif;font-weight:400;color:#12110F;margin:0;line-height:1.08;text-wrap:balance}
+.h3{font-family:'Cormorant Garamond',Garamond,serif;font-weight:500;color:#12110F;margin:0;line-height:1.15}
+.body{font-family:Jost,'Helvetica Neue',sans-serif;font-size:17px;line-height:1.75;color:#5A554C;margin:0;text-wrap:pretty}
+.lede{font-family:Jost,'Helvetica Neue',sans-serif;font-size:19px;line-height:1.7;color:#3D3932;margin:0;text-wrap:pretty}
+.nav a{font-family:Jost,sans-serif;color:#12110F;text-decoration:none;font-size:12.5px;letter-spacing:.07em;padding:10px 0;border-bottom:1px solid transparent;white-space:nowrap}
+.nav a:hover{border-bottom-color:#B8913F}
+.nav a.on{border-bottom-color:#B8913F;color:#806128}
+.nav a.cta{border:1px solid #12110F;padding:12px 20px;letter-spacing:.14em;text-transform:uppercase;font-size:11.5px}
+.nav a.cta:hover{background:#12110F;color:#FAF7F0}
+.mnav a{font-family:'Cormorant Garamond',serif;font-size:26px;color:#12110F;text-decoration:none;padding:12px 0;border-bottom:1px solid #E3DACA}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:0 30px;font-family:Jost,sans-serif;font-size:12.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;border:1px solid #12110F;transition:background .2s,color .2s,border-color .2s}
+.btn-dark{background:#12110F;color:#FAF7F0}.btn-dark:hover{background:#806128;border-color:#806128;color:#FAF7F0}
+.btn-line{color:#12110F;background:transparent}.btn-line:hover{background:#12110F;color:#FAF7F0}
+.btn-gold{border-color:#B8913F;color:#F7F2E8;background:transparent}.btn-gold:hover{background:#B8913F;color:#12110F}
+.more{display:inline-flex;align-items:center;gap:12px;font-family:Jost,sans-serif;font-size:12.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#12110F;text-decoration:none;border-bottom:1px solid #B8913F;padding:10px 0 8px}
+.more:hover{color:#806128}
+.ph{background-color:#EAE2D2;background-image:repeating-linear-gradient(135deg,rgba(128,97,40,.07) 0 1px,transparent 1px 14px);display:flex;align-items:center;justify-content:center;text-align:center;padding:24px}
+.ph span{font-family:Jost,sans-serif;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#6E5A35}
+.foot a{color:#E9E2D3;text-decoration:none;font-family:Jost,sans-serif;font-size:14px}
+.foot a:hover{color:#C9A55A}
+.menu-btn{display:none}
+@media (max-width:1180px){.nav{display:none !important}.menu-btn{display:inline-flex !important}}
+@media (max-width:640px){.wrap{padding-left:20px;padding-right:20px}.h1{font-size:46px !important}.h2{font-size:38px !important}.sec{padding-top:72px !important;padding-bottom:72px !important}.lede{font-size:17px}}
+</style>
+</helmet>
+<div style="background: #FAF7F0; color: #12110F; font-family: Jost, 'Helvetica Neue', sans-serif">
+
+<header style="background: #FAF7F0; border-bottom: 1px solid #E3DACA">
+<div class="wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 92px">
+<a href="Main.dc.html" style="display: flex; align-items: center; gap: 14px; text-decoration: none; color: #12110F">
+<img src="/_blob/0306bf88b9ac180bd2dd024f1c8c1f37" alt="" style="width: 48px; height: auto; display: block">
+<span class="serif" style="font-size: 25px; letter-spacing: .06em; font-weight: 500">UGO N &amp; Co.</span>
+</a>
+<nav class="nav" aria-label="Main" style="display: flex; align-items: center; gap: 26px">
+<a href="Main.dc.html" class="on">Home</a>
+<a href="Corporate.dc.html">Corporate Finance &amp; Strategy</a>
+<a href="Exhibitions.dc.html">Private Exhibitions</a>
+<a href="PrivateArt.dc.html">Private Art</a>
+<a href="Strategic.dc.html">Strategic Engagements</a>
+<a href="About.dc.html">About</a>
+<a href="Contact.dc.html" class="cta">Contact</a>
+</nav>
+<button class="menu-btn" aria-label="Open menu" onClick="{{toggleMenu}}" style="width: 48px; height: 48px; align-items: center; justify-content: center; background: transparent; border: 1px solid #12110F; cursor: pointer; color: #12110F">
+<svg width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M0 1h20M0 7h20M0 13h20"></path></svg>
+</button>
+</div>
+<sc-if value="{{menuOpen}}" hint-placeholder-val="{{false}}">
+<nav class="mnav wrap" aria-label="Mobile" style="display: flex; flex-direction: column; padding-top: 8px; padding-bottom: 28px">
+<a href="Main.dc.html">Home</a>
+<a href="Corporate.dc.html">Corporate Finance &amp; Strategy</a>
+<a href="Exhibitions.dc.html">Private Exhibitions</a>
+<a href="PrivateArt.dc.html">Private Art</a>
+<a href="Strategic.dc.html">Strategic Engagements</a>
+<a href="About.dc.html">About</a>
+<a href="Contact.dc.html">Contact</a>
+</nav>
+</sc-if>
+</header>
+
+<section style="position: relative; overflow: hidden">
+<div class="wrap sec" style="padding-top: 112px; padding-bottom: 128px; display: flex; flex-wrap: wrap; align-items: center; gap: 80px">
+<div style="flex: 1 1 540px; min-width: 0; display: flex; flex-direction: column; gap: 30px">
+<p class="eyebrow">UGO N &amp; Co.</p>
+<h1 class="h1" style="font-size: 78px">Where experience, relationships and <em style="color: #806128">opportunity</em> come together.</h1>
+<div style="width: 72px; height: 1px; background: #B8913F"></div>
+<p class="lede">UGO N &amp; Co. is a relationship-driven firm operating across business, African contemporary art and international opportunities.</p>
+<p class="body">We provide senior-level corporate finance and strategy support, create private African contemporary art exhibitions and art opportunities, and undertake select strategic engagements where our experience, relationships and ability to execute can create meaningful value.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; padding-top: 8px">
+<a href="#work" class="btn btn-dark">Explore Our Work</a>
+<a href="Contact.dc.html" class="btn btn-line">Start a Conversation</a>
+</div>
+</div>
+<div style="flex: 1 1 420px; min-width: 0; display: flex; justify-content: center">
+<div style="position: relative; width: 100%; max-width: 500px; aspect-ratio: 4 / 5">
+<div class="ph" style="position: absolute; inset: 0"><span>Image · Featured artwork</span></div>
+<div aria-hidden="true" style="position: absolute; width: 74%; aspect-ratio: 1; border: 1px solid #B8913F; border-radius: 50%; left: -20%; bottom: -12%"></div>
+<div aria-hidden="true" style="position: absolute; width: 10px; height: 10px; background: #B8913F; border-radius: 50%; right: -5px; top: 18%"></div>
+</div>
+</div>
+</div>
+</section>
+
+<div style="background: #12110F">
+<div class="wrap" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 18px 36px; padding-top: 26px; padding-bottom: 26px">
+<span class="eyebrow" style="color: #E9E2D3">African Contemporary Art</span>
+<span aria-hidden="true" style="width: 1px; height: 18px; background: #B8913F"></span>
+<span class="eyebrow" style="color: #E9E2D3">Finance &amp; Strategy</span>
+<span aria-hidden="true" style="width: 1px; height: 18px; background: #B8913F"></span>
+<span class="eyebrow" style="color: #E9E2D3">Global Partnerships</span>
+</div>
+</div>
+
+<section id="work">
+<div class="wrap sec" style="padding-top: 128px; padding-bottom: 128px; display: flex; flex-direction: column; gap: 80px">
+<div style="display: flex; flex-wrap: wrap; gap: 48px 96px; align-items: flex-end">
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<p class="eyebrow">What We Do</p>
+<h2 class="h2" style="font-size: 60px">Experience. Relationships. <em style="color: #806128">Execution.</em></h2>
+</div>
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<p class="body">UGO N &amp; Co. brings together corporate leadership experience, entrepreneurial perspective, international relationships and a growing network within African contemporary art.</p>
+<p class="body" style="color: #12110F">Our work is organized around four areas.</p>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(500px, 100%), 1fr)); gap: 0 72px; border-top: 1px solid #12110F">
+<article style="display: flex; flex-direction: column; gap: 20px; padding: 48px 0 56px; border-bottom: 1px solid #E3DACA">
+<div style="display: flex; align-items: baseline; gap: 20px">
+<span class="serif" style="font-size: 22px; color: #806128; font-style: italic">01</span>
+<h3 class="h3" style="font-size: 36px">Corporate Finance &amp; Strategy</h3>
+</div>
+<p class="body">Senior-level finance, strategy and business support for companies navigating growth, transformation, performance challenges and complex decisions.</p>
+<p class="body">Engagements may include fractional or interim CFO leadership, financial planning and analysis, performance improvement, strategic planning, transaction support and special finance projects.</p>
+<div style="padding-top: 8px"><a href="Corporate.dc.html" class="more">Explore Corporate Finance &amp; Strategy <svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M0 5h17M13 1l4 4-4 4"></path></svg></a></div>
+</article>
+<article style="display: flex; flex-direction: column; gap: 20px; padding: 48px 0 56px; border-bottom: 1px solid #E3DACA">
+<div style="display: flex; align-items: baseline; gap: 20px">
+<span class="serif" style="font-size: 22px; color: #806128; font-style: italic">02</span>
+<h3 class="h3" style="font-size: 36px">Private Exhibitions</h3>
+</div>
+<p class="body">Bespoke African contemporary art exhibitions and cultural experiences created for corporations, private banks, executives and select private audiences.</p>
+<p class="body">Each exhibition is developed around the host, its audience and the purpose of the engagement.</p>
+<div style="padding-top: 8px"><a href="Exhibitions.dc.html" class="more">Discover Private Exhibitions <svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M0 5h17M13 1l4 4-4 4"></path></svg></a></div>
+</article>
+<article style="display: flex; flex-direction: column; gap: 20px; padding: 48px 0 56px; border-bottom: 1px solid #E3DACA">
+<div style="display: flex; align-items: baseline; gap: 20px">
+<span class="serif" style="font-size: 22px; color: #806128; font-style: italic">03</span>
+<h3 class="h3" style="font-size: 36px">Private Art</h3>
+</div>
+<p class="body">Select sourcing, private sales and introductions involving African contemporary artists, galleries, collectors and trusted art-world partners.</p>
+<div style="padding-top: 8px"><a href="PrivateArt.dc.html" class="more">Explore Private Art <svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M0 5h17M13 1l4 4-4 4"></path></svg></a></div>
+</article>
+<article style="display: flex; flex-direction: column; gap: 20px; padding: 48px 0 56px; border-bottom: 1px solid #E3DACA">
+<div style="display: flex; align-items: baseline; gap: 20px">
+<span class="serif" style="font-size: 22px; color: #806128; font-style: italic">04</span>
+<h3 class="h3" style="font-size: 36px">Strategic Engagements</h3>
+</div>
+<p class="body">Business development, strategic introductions, international opportunities and special projects where UGO N &amp; Co. has a clearly defined role and can meaningfully contribute.</p>
+<div style="padding-top: 8px"><a href="Strategic.dc.html" class="more">Explore Strategic Engagements <svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M0 5h17M13 1l4 4-4 4"></path></svg></a></div>
+</article>
+</div>
+</div>
+</section>
+
+<section style="background: #F1EBDF; border-top: 1px solid #E3DACA">
+<div class="wrap sec" style="padding-top: 120px; padding-bottom: 120px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px">
+<img src="/_blob/0306bf88b9ac180bd2dd024f1c8c1f37" alt="" style="width: 84px; height: auto">
+<h2 class="h2" style="font-size: 56px">Start a Conversation</h2>
+<p class="lede" style="max-width: 560px">UGO N &amp; Co. welcomes thoughtful inquiries across its four areas of engagement.</p>
+<div style="padding-top: 8px"><a href="Contact.dc.html" class="btn btn-dark">Start a Conversation</a></div>
+</div>
+</section>
+
+<footer class="foot" style="background: #12110F; color: #E9E2D3">
+<div class="wrap" style="padding-top: 88px; padding-bottom: 40px; display: flex; flex-direction: column; gap: 64px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 56px">
+<div style="display: flex; flex-direction: column; gap: 18px">
+<img src="/_blob/076e3aa9d394e81e118c4cc43c4c0966" alt="" style="width: 64px; height: auto">
+<p class="serif" style="margin: 0; font-size: 32px; letter-spacing: .05em; font-weight: 500; color: #F7F2E8">UGO N &amp; Co.</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.8; color: #A8A196">Corporate Finance &amp; Strategy · Private Exhibitions · Private Art · Strategic Engagements</p>
+<p class="serif" style="margin: 0; font-size: 22px; font-style: italic; color: #C9A55A">Experience. Relationships. Execution.</p>
+</div>
+<nav aria-label="Footer" style="display: flex; flex-direction: column; gap: 14px">
+<p class="eyebrow" style="color: #C9A55A; padding-bottom: 6px">Navigation</p>
+<a href="Main.dc.html">Home</a>
+<a href="Corporate.dc.html">Corporate Finance &amp; Strategy</a>
+<a href="Exhibitions.dc.html">Private Exhibitions</a>
+<a href="PrivateArt.dc.html">Private Art</a>
+<a href="Strategic.dc.html">Strategic Engagements</a>
+<a href="About.dc.html">About</a>
+<a href="Contact.dc.html">Contact</a>
+</nav>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p class="eyebrow" style="color: #C9A55A; padding-bottom: 6px">Ovico Gallery</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.8; color: #A8A196">A separate contemporary African art gallery co-owned by Ugochi D. Nwoga.</p>
+<a href="#" style="border-bottom: 1px solid #B8913F; align-self: flex-start; padding-bottom: 4px">Visit Ovico Gallery</a>
+</div>
+</div>
+<div style="border-top: 1px solid #2E2A24; padding-top: 32px; display: flex; flex-direction: column; gap: 20px">
+<p class="eyebrow" style="color: #A8A196; font-size: 11px">Disclaimer</p>
+<p style="margin: 0; font-size: 13px; line-height: 1.8; color: #A8A196; max-width: 980px">UGO N &amp; Co. provides corporate finance and strategy consulting, relationship facilitation, African contemporary art-related services, business-development support and select strategic services. UGO N &amp; Co. does not provide legal, tax, securities brokerage, investment-management or regulated financial-advisory services. Specialized professional advice should be obtained where appropriate.</p>
+<p style="margin: 0; font-size: 13px; color: #A8A196">© UGO N &amp; Co. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3600}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const open = !!(this.state && this.state.menuOpen);
+    return {
+      menuOpen: open,
+      toggleMenu: () => this.setState({ menuOpen: !open })
+    };
+  }
+}
+</script>
+</body>
+</html>

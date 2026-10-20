@@ -1,0 +1,98 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "About.dc.html": {
+      "expand": "fill",
+      "h": 5000,
+      "is_interactive": true,
+      "title": "About",
+      "w": 1440,
+      "x": 7600,
+      "y": 0
+    },
+    "Contact.dc.html": {
+      "expand": "fill",
+      "h": 2400,
+      "is_interactive": true,
+      "title": "Contact",
+      "w": 1440,
+      "x": 9120,
+      "y": 0
+    },
+    "Corporate.dc.html": {
+      "expand": "fill",
+      "h": 4300,
+      "is_interactive": true,
+      "title": "Corporate Finance & Strategy",
+      "w": 1440,
+      "x": 1520,
+      "y": 0
+    },
+    "Exhibitions.dc.html": {
+      "expand": "fill",
+      "h": 6400,
+      "is_interactive": true,
+      "title": "Private Exhibitions",
+      "w": 1440,
+      "x": 3040,
+      "y": 0
+    },
+    "Main.dc.html": {
+      "expand": "fill",
+      "h": 3600,
+      "is_interactive": true,
+      "title": "Home",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "PrivateArt.dc.html": {
+      "expand": "fill",
+      "h": 4600,
+      "is_interactive": true,
+      "title": "Private Art",
+      "w": 1440,
+      "x": 4560,
+      "y": 0
+    },
+    "Strategic.dc.html": {
+      "expand": "fill",
+      "h": 4200,
+      "is_interactive": true,
+      "title": "Strategic Engagements",
+      "w": 1440,
+      "x": 6080,
+      "y": 0
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-10-19T10:50:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "view": "canvas"
+  },
+  "notes": {
+    "sitetitle": {
+      "kind": "title1",
+      "maxW": 8000,
+      "text": "UGO N & Co. · Website",
+      "w": 240,
+      "x": 0,
+      "y": -320
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "Corporate.dc.html",
+    "Exhibitions.dc.html",
+    "PrivateArt.dc.html",
+    "Strategic.dc.html",
+    "About.dc.html",
+    "Contact.dc.html"
+  ],
+  "pages": [],
+  "title": "UGO N & Co. Website"
+}

@@ -1,0 +1,14 @@
+.git
+.next
+node_modules
+handoff
+screenshots
+test-results
+playwright-report
+tests
+*.md
+.env*
+!.env.example
+Dockerfile
+.dockerignore
+.DS_Store

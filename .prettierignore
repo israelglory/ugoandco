@@ -1,0 +1,6 @@
+handoff/
+.next/
+node_modules/
+pnpm-lock.yaml
+screenshots/
+UGO_N_PROMPT.md

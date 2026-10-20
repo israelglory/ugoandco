@@ -1,26 +1,259 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* The design shrinks type and padding at 640px and below (inclusive). */
+@custom-variant sm-down (@media (width <= 640px));
+
+/* Design tokens: DESIGN_SPEC.md sections 1 to 3 */
+@theme {
+  --color-*: initial;
+  --color-ivory: #faf7f0;
+  --color-paper: #f1ebdf;
+  --color-card: #fffdf8;
+  --color-ink: #12110f;
+  --color-ink-soft: #3d3932;
+  --color-muted: #5a554c;
+  --color-gold: #b8913f;
+  --color-gold-text: #806128;
+  --color-gold-light: #c9a55a;
+  --color-rule: #e3daca;
+  --color-rule-strong: #dcd2bf;
+  --color-rule-dark: #2e2a24;
+  --color-circle-dark: #3a3226;
+  --color-circle-light: #e0d2b4;
+  --color-on-dark: #f7f2e8;
+  --color-on-dark-body: #e9e2d3;
+  --color-on-dark-muted: #a8a196;
+  --color-placeholder: #eae2d2;
+  --color-placeholder-dark: #1c1a16;
+  --color-placeholder-label: #6e5a35;
+  --color-field-line: #bfb39c;
+  --color-field-hint: #6b655a;
+  --color-pill-line: #d2c5ac;
+  --color-chip-line: #d8ccb4;
+  --color-error: #9b2c1f;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+
+  --font-serif: var(--font-cormorant), Garamond, "Times New Roman", serif;
+  --font-sans: var(--font-jost), "Helvetica Neue", Arial, sans-serif;
+
+  --container-site: 1240px;
+  --breakpoint-nav: 1180px;
+
+  --shadow-card: 0 30px 60px -40px rgb(18 17 15 / 0.25);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    background: var(--color-ivory);
+    color: var(--color-ink);
+    /* The approved previews use the browser default rather than Tailwind's 1.5. */
+    line-height: normal;
+    -webkit-text-size-adjust: 100%;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    background: var(--color-ivory);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold-text);
+    outline-offset: 3px;
+  }
+
+  .on-dark :focus-visible {
+    outline-color: var(--color-gold-light);
+  }
+
+  ::selection {
+    background: var(--color-circle-light);
+    color: var(--color-ink);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Type scale and recurring patterns from the approved previews */
+@layer components {
+  .section-pad {
+    padding-top: var(--pt, 128px);
+    padding-bottom: var(--pb, 128px);
+  }
+
+  .eyebrow {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--color-gold-text);
+  }
+  .eyebrow-sm {
+    font-size: 11px;
+  }
+  .eyebrow-muted {
+    color: var(--color-muted);
+  }
+
+  .h1,
+  .h2,
+  .h3 {
+    margin: 0;
+    font-family: var(--font-serif);
+    color: var(--color-ink);
+  }
+  .h1 {
+    font-size: var(--fs, 76px);
+    font-weight: 400;
+    line-height: 1.03;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  .h2 {
+    font-size: var(--fs, 56px);
+    font-weight: 400;
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+  .h3 {
+    font-size: var(--fs, 30px);
+    font-weight: 500;
+    line-height: 1.15;
+  }
+  .statement {
+    font-style: italic;
+  }
+  .accent {
+    font-style: italic;
+    color: var(--color-gold-text);
+  }
+
+  .lede {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: 19px;
+    line-height: 1.7;
+    color: var(--color-ink-soft);
+    text-wrap: pretty;
+  }
+  .body {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--color-muted);
+    text-wrap: pretty;
+  }
+  .body-strong {
+    color: var(--color-ink);
+  }
+  .fine {
+    margin: 0;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--color-muted);
+  }
+
+  .short-rule {
+    width: 72px;
+    height: 1px;
+    background: var(--color-gold);
+  }
+
+  .numeral {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--color-gold-text);
+  }
+
+  /* Dark surfaces: ink sections and the footer */
+  .on-dark .h1,
+  .on-dark .h2,
+  .on-dark .h3 {
+    color: var(--color-on-dark);
+  }
+  .on-dark .eyebrow,
+  .on-dark .accent,
+  .on-dark .numeral {
+    color: var(--color-gold-light);
+  }
+  .on-dark .eyebrow-muted {
+    color: var(--color-on-dark-muted);
+  }
+  .on-dark .body {
+    color: var(--color-on-dark-muted);
+  }
+  .on-dark .lede,
+  .on-dark .body-strong {
+    color: var(--color-on-dark-body);
+  }
+
+  .image-placeholder {
+    background-color: var(--color-placeholder);
+    background-image: repeating-linear-gradient(135deg, rgb(128 97 40 / 0.07) 0 1px, transparent 1px 14px);
+    color: var(--color-placeholder-label);
+  }
+  .image-placeholder-dark {
+    background-color: var(--color-placeholder-dark);
+    background-image: repeating-linear-gradient(135deg, rgb(201 165 90 / 0.08) 0 1px, transparent 1px 14px);
+    color: var(--color-on-dark-muted);
+  }
+
+  @media (max-width: 640px) {
+    .section-pad {
+      padding-top: 72px;
+      padding-bottom: 72px;
+    }
+    .h1 {
+      font-size: var(--fs-sm, 44px);
+    }
+    .h2 {
+      font-size: var(--fs-sm, 36px);
+    }
+    .lede {
+      font-size: 17px;
+    }
+  }
+}
+
+/* Motion (DESIGN_SPEC.md section 7): start states only. RevealObserver plays the
+   animations; nothing is hidden without JS or under reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .js [data-reveal] {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  /* Gold rings draw in once by sweeping a conic mask around the 1px border. */
+  .js [data-ring-draw] {
+    --ring-sweep: 0deg;
+    mask-image: conic-gradient(#000 var(--ring-sweep), transparent 0);
+  }
+}
+
+@property --ring-sweep {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 360deg;
+}
+
+/* Enlarges small text links to a 44px hit area without changing their look. */
+@utility hit-area {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 50% -6px auto;
+    height: 44px;
+    transform: translateY(-50%);
+  }
 }
