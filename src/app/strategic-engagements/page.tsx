@@ -16,7 +16,8 @@ export default function StrategicEngagementsPage() {
   return (
     <>
       <Section
-        pt={112}
+        pt={48}
+        ptSm={40}
         pb={112}
         decor={<GoldRing tone="light" className="-top-[240px] -right-[260px] w-[720px]" />}
         innerClassName="flex flex-col gap-14"

@@ -9,6 +9,9 @@ type SectionProps = {
   /** Desktop vertical padding in px. Collapses to 72px at 640px and below. */
   pt?: number;
   pb?: number;
+  /** Vertical padding in px at 640px and below (default 72). */
+  ptSm?: number;
+  pbSm?: number;
   id?: string;
   className?: string;
   innerClassName?: string;
@@ -31,6 +34,8 @@ export function Section({
   ruleBottom,
   pt = 128,
   pb = 128,
+  ptSm,
+  pbSm,
   id,
   className,
   innerClassName,
@@ -55,7 +60,14 @@ export function Section({
       {decor}
       <Container
         className={cn("section-pad relative", innerClassName)}
-        style={{ "--pt": `${pt}px`, "--pb": `${pb}px` } as React.CSSProperties}
+        style={
+          {
+            "--pt": `${pt}px`,
+            "--pb": `${pb}px`,
+            ...(ptSm !== undefined ? { "--pt-sm": `${ptSm}px` } : {}),
+            ...(pbSm !== undefined ? { "--pb-sm": `${pbSm}px` } : {}),
+          } as React.CSSProperties
+        }
       >
         {children}
       </Container>

@@ -18,7 +18,7 @@ export default function PrivateArtPage() {
 
   return (
     <>
-      <Section clip pt={112} pb={120} innerClassName="flex flex-wrap items-center gap-x-[88px] gap-y-16">
+      <Section clip pt={48} ptSm={40} pb={120} innerClassName="flex flex-wrap items-center gap-x-[88px] gap-y-16">
         <div className="flex min-w-0 flex-[1_1_540px] flex-col gap-7">
           <div className="flex flex-wrap items-center gap-3.5">
             <Eyebrow>{hero.eyebrow}</Eyebrow>

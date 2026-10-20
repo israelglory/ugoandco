@@ -16,7 +16,7 @@ export default function CorporatePage() {
 
   return (
     <>
-      <Section pt={104} pb={112} innerClassName="flex flex-col gap-14">
+      <Section pt={48} ptSm={40} pb={112} innerClassName="flex flex-col gap-14">
         <div className="flex max-w-[980px] flex-col gap-7">
           <Eyebrow>{hero.eyebrow}</Eyebrow>
           <Heading as="h1" size={70} accent={hero.title.accent}>

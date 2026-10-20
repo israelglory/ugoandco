@@ -18,7 +18,7 @@ export default function AboutPage() {
 
   return (
     <>
-      <Section pt={112} pb={112} innerClassName="flex flex-col gap-14">
+      <Section pt={48} ptSm={40} pb={112} innerClassName="flex flex-col gap-14">
         <div className="flex flex-wrap items-end gap-x-24 gap-y-10">
           <div className="flex min-w-0 flex-[1_1_560px] flex-col gap-7">
             <Eyebrow>{hero.eyebrow}</Eyebrow>

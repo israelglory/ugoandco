@@ -17,10 +17,19 @@ export default function PrivateExhibitionsPage() {
 
   return (
     <>
-      <Section variant="ink" clip pt={112} pb={112} innerClassName="flex flex-wrap items-center gap-x-20 gap-y-16">
-        <div className="flex min-w-0 flex-[1_1_520px] flex-col gap-7">
+      {/* Same scale as the Home hero: type and image follow viewport height so it fits one screen. */}
+      <Section
+        variant="ink"
+        clip
+        pt={48}
+        ptSm={40}
+        pb={64}
+        pbSm={64}
+        innerClassName="flex flex-wrap items-center gap-x-20 gap-y-14"
+      >
+        <div className="flex min-w-0 flex-[1.15_1_520px] flex-col gap-[22px]">
           <Eyebrow>{hero.eyebrow}</Eyebrow>
-          <Heading as="h1" size={72} accent={hero.title.accent}>
+          <Heading as="h1" size="clamp(44px, 5.4svh + 8px, 64px)" sizeSm={42} accent={hero.title.accent}>
             {hero.title.text}
           </Heading>
           <ShortRule />
@@ -31,8 +40,13 @@ export default function PrivateExhibitionsPage() {
             </Button>
           </div>
         </div>
-        <div className="min-w-0 flex-[1_1_420px]">
-          <ImageFrame slot={hero.image} aspect="5/6" tone="dark">
+        <div className="flex min-w-0 flex-[1_1_420px] justify-center">
+          <ImageFrame
+            slot={hero.image}
+            aspect="5/6"
+            tone="dark"
+            className="max-w-[460px] min-[1100px]:max-w-[min(460px,calc((100svh-204px)/1.2))]"
+          >
             <GoldRing className="-top-[10%] -right-[14%] w-[60%]" />
           </ImageFrame>
         </div>

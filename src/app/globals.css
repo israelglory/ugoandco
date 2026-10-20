@@ -211,8 +211,8 @@
 
   @media (max-width: 640px) {
     .section-pad {
-      padding-top: 72px;
-      padding-bottom: 72px;
+      padding-top: var(--pt-sm, 72px);
+      padding-bottom: var(--pb-sm, 72px);
     }
     .h1 {
       font-size: var(--fs-sm, 44px);

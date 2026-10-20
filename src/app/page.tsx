@@ -19,10 +19,11 @@ export default function HomePage() {
 
   return (
     <>
-      <Section pt={112} pb={128} clip innerClassName="flex flex-wrap items-center gap-20">
-        <div className="flex min-w-0 flex-[1_1_540px] flex-col gap-[30px]">
+      {/* Type and image scale with viewport height so the whole hero fits in the first screen. */}
+      <Section pt={48} pb={56} ptSm={40} pbSm={64} clip innerClassName="flex flex-wrap items-center gap-x-20 gap-y-14">
+        <div className="flex min-w-0 flex-[1.15_1_540px] flex-col gap-[22px]">
           <Eyebrow>{hero.eyebrow}</Eyebrow>
-          <Heading as="h1" size={78} sizeSm={46} accent={hero.title.accent}>
+          <Heading as="h1" size="clamp(44px, 5.4svh + 8px, 64px)" sizeSm={42} accent={hero.title.accent}>
             {hero.title.text}
           </Heading>
           <ShortRule />
@@ -36,7 +37,12 @@ export default function HomePage() {
           </div>
         </div>
         <div className="flex min-w-0 flex-[1_1_420px] justify-center">
-          <ImageFrame slot={hero.image} aspect="4/5" eager className="max-w-[500px]">
+          <ImageFrame
+            slot={hero.image}
+            aspect="4/5"
+            eager
+            className="max-w-[460px] min-[1120px]:max-w-[min(460px,calc((100svh-196px)*0.8))]"
+          >
             <GoldRing className="-bottom-[12%] -left-[20%] w-[74%]" />
             <GoldDot className="top-[18%] -right-[5px]" />
           </ImageFrame>

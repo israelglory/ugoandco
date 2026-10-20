@@ -1,7 +1,7 @@
-import framedPaintings from "@/assets/images/placeholders/framed-paintings.jpg";
 import galleryCorner from "@/assets/images/placeholders/gallery-corner.jpg";
 import galleryInstallation from "@/assets/images/placeholders/gallery-installation.jpg";
 import galleryReception from "@/assets/images/placeholders/gallery-reception.jpg";
+import homeHero from "@/assets/images/placeholders/home-hero.jpg";
 import type { ImageSlot } from "./types";
 
 type SlotImage = NonNullable<ImageSlot["image"]>;
@@ -13,8 +13,9 @@ type SlotImage = NonNullable<ImageSlot["image"]>;
  */
 export const placeholderImages = {
   homeHero: {
-    src: framedPaintings,
-    alt: "Two framed paintings: red and orange roses on a green ground, and figures with patterned clay pots on orange",
+    src: homeHero,
+    alt: "A gallery corner with a large patterned painting of a face, a green figurative painting and carved and beaded sculptures",
+    position: "50% 35%",
   },
   exhibitionsHero: {
     src: galleryInstallation,

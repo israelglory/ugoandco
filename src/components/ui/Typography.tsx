@@ -24,8 +24,8 @@ type HeadingProps = {
   as?: "h1" | "h2" | "h3" | "p";
   /** Visual style; defaults to the element level. */
   look?: "h1" | "h2" | "h3";
-  /** Desktop font size in px. */
-  size?: number;
+  /** Desktop font size in px, or any CSS length such as a clamp(). */
+  size?: number | string;
   /** Font size at 640px and below (h1 and h2 only). */
   sizeSm?: number;
   /** Italic display statement, e.g. "Analysis should lead to action." */
@@ -41,7 +41,7 @@ export function Heading({ as = "h2", look, size, sizeSm, statement, accent, id, 
   const Tag = as;
   const style = look ?? (as === "p" ? "h3" : as);
   const vars = {
-    ...(size ? { "--fs": `${size}px` } : {}),
+    ...(size ? { "--fs": typeof size === "number" ? `${size}px` : size } : {}),
     ...(sizeSm ? { "--fs-sm": `${sizeSm}px` } : {}),
   } as React.CSSProperties;
   return (

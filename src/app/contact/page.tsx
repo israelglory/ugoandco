@@ -13,7 +13,8 @@ export default function ContactPage() {
 
   return (
     <Section
-      pt={104}
+      pt={48}
+      ptSm={40}
       pb={128}
       decor={<GoldRing tone="light" className="-top-[200px] -left-[300px] w-[640px]" />}
       innerClassName="flex flex-wrap items-start gap-x-[88px] gap-y-16"
