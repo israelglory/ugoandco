@@ -1,4 +1,4 @@
-import { placeholderImages } from "./placeholder-images";
+import homeHeroPhoto from "@/assets/images/home-hero.jpg";
 import { routes } from "./site";
 import type { ImageSlot, PageMeta, RichHeading } from "./types";
 
@@ -19,7 +19,14 @@ export const home = {
     body: "We provide senior-level corporate finance and strategy support, create private African contemporary art exhibitions and art opportunities, and undertake select strategic engagements where our experience, relationships and ability to execute can create meaningful value.",
     primaryCta: { label: "Explore Our Work", href: "#work" },
     secondaryCta: { label: "Start a Conversation", href: routes.contact },
-    image: { label: "Image · Featured artwork", image: placeholderImages.homeHero } satisfies ImageSlot,
+    image: {
+      label: "Image · Featured artwork",
+      image: {
+        src: homeHeroPhoto,
+        alt: "A smiling woman in a white dress with a colorful circle print, standing in front of an abstract painting",
+        position: "50% 18%",
+      },
+    } satisfies ImageSlot,
   },
   disciplines: ["African Contemporary Art", "Finance & Strategy", "Global Partnerships"],
   whatWeDo: {

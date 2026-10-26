@@ -82,29 +82,29 @@ Contact form messages (success, error, validation and the "Sending…" label) ar
 
 Every image slot is an `ImageSlot` in a content module: a `label` for the hatched placeholder, plus an optional `image` (`src`, `alt`, and an optional `position` for the crop, as CSS `object-position`).
 
-All six slots currently show **temporary event and gallery photos**, defined in one place: [`src/content/placeholder-images.ts`](src/content/placeholder-images.ts) (files in `src/assets/images/placeholders/`). The About slot is not a portrait of Ugochi Nwoga; it is a gallery photo standing in until her portrait is supplied. Remove an entry's `image` to go back to the hatched placeholder.
+Final photos are set directly in the page's content module and live in `src/assets/images/`. Slots still waiting for final photography show **temporary event and gallery photos**, defined in one place: [`src/content/placeholder-images.ts`](src/content/placeholder-images.ts) (files in `src/assets/images/placeholders/`). Remove an entry's `image` to go back to the hatched placeholder.
 
 To add a final photo:
 
-1. Put the file in `src/assets/images/`, e.g. `src/assets/images/home-hero.jpg`. Use at least 1200px on the long edge, ideally already cropped to the slot's aspect ratio.
-2. Point the slot at it, either in `placeholder-images.ts` or directly in the page's content module:
+1. Put the file in `src/assets/images/`. Use at least 1200px on the long edge, ideally already cropped to the slot's aspect ratio.
+2. Import it in the page's content module and set the slot's `image`, as `home.ts` does:
 
    ```ts
-   import homeHero from "@/assets/images/home-hero.jpg";
+   import homeHeroPhoto from "@/assets/images/home-hero.jpg";
 
-   image: { label: "Image · Featured artwork", image: { src: homeHero, alt: "Describe the artwork, artist and title" } },
+   image: { label: "Image · Featured artwork", image: { src: homeHeroPhoto, alt: "Describe what the photo shows", position: "50% 18%" } },
    ```
 
 Static imports give Next.js the dimensions, a content hash and responsive WebP output. Hero images load eagerly; the rest load lazily.
 
-| Slot                            | Key in `placeholder-images.ts` | Aspect ratio |
-| ------------------------------- | ------------------------------ | ------------ |
-| Home hero, featured artwork     | `homeHero`                     | 4:5          |
-| Exhibitions hero, installation  | `exhibitionsHero`              | 5:6          |
-| Exhibitions, artwork detail     | `exhibitionsDetail`            | 4:5          |
-| Private Art hero, artwork       | `privateArtHero`               | 3:4          |
-| Private Art, Ovico Gallery      | `ovicoGallery`                 | 4:3          |
-| About, portrait of Ugochi Nwoga | `aboutPortrait`                | 4:5          |
+| Slot                            | Aspect ratio | Current image                                                         |
+| ------------------------------- | ------------ | --------------------------------------------------------------------- |
+| Home hero, featured artwork     | 4:5          | Final: `home-hero.jpg` (set in `home.ts`)                             |
+| Exhibitions hero, installation  | 5:6          | Temporary: `exhibitionsHero` in `placeholder-images.ts`               |
+| Exhibitions, artwork detail     | 4:5          | Temporary: `exhibitionsDetail`                                        |
+| Private Art hero, artwork       | 3:4          | Temporary: `privateArtHero`                                           |
+| Private Art, Ovico Gallery      | 4:3          | Temporary: `ovicoGallery`                                             |
+| About, portrait of Ugochi Nwoga | 4:5          | Final: `ugochi-nwoga.jpg` (set in `about.ts`), photo by Kyle Harrison |
 
 ## Ovico Gallery link
 

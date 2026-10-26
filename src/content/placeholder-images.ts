@@ -1,7 +1,6 @@
 import galleryCorner from "@/assets/images/placeholders/gallery-corner.jpg";
 import galleryInstallation from "@/assets/images/placeholders/gallery-installation.jpg";
 import galleryReception from "@/assets/images/placeholders/gallery-reception.jpg";
-import homeHero from "@/assets/images/placeholders/home-hero.jpg";
 import type { ImageSlot } from "./types";
 
 type SlotImage = NonNullable<ImageSlot["image"]>;
@@ -12,11 +11,6 @@ type SlotImage = NonNullable<ImageSlot["image"]>;
  * Each slot's crop is set with `position` (CSS object-position).
  */
 export const placeholderImages = {
-  homeHero: {
-    src: homeHero,
-    alt: "A gallery corner with a large patterned painting of a face, a green figurative painting and carved and beaded sculptures",
-    position: "50% 35%",
-  },
   exhibitionsHero: {
     src: galleryInstallation,
     alt: "A gallery installation with paintings on dark and white walls and carved masks on a draped table",
@@ -34,11 +28,5 @@ export const placeholderImages = {
   ovicoGallery: {
     src: galleryInstallation,
     alt: "A gallery room hung with paintings, with an easel and carved masks on a draped table",
-  },
-  // Not a portrait of Ugochi D. Nwoga: a gallery photo standing in until her portrait is supplied.
-  aboutPortrait: {
-    src: galleryCorner,
-    alt: "A gallery corner with a patterned painting of a face, a green figurative painting and carved sculptures",
-    position: "50% 0%",
   },
 } satisfies Record<string, SlotImage>;

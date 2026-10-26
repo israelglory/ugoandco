@@ -1,4 +1,4 @@
-import { placeholderImages } from "./placeholder-images";
+import ugochiPortrait from "@/assets/images/ugochi-nwoga.jpg";
 import { routes } from "./site";
 import type { ImageSlot, PageMeta, RichHeading } from "./types";
 
@@ -48,7 +48,10 @@ export const about = {
     ],
     closing:
       "UGO N & Co. brings together these corporate, entrepreneurial and cultural experiences within one platform.",
-    portrait: { label: "Portrait · Ugochi D. Nwoga", image: placeholderImages.aboutPortrait } satisfies ImageSlot,
+    portrait: {
+      label: "Portrait · Ugochi D. Nwoga",
+      image: { src: ugochiPortrait, alt: "Portrait of Ugochi D. Nwoga", position: "47% 50%" },
+    } satisfies ImageSlot,
   },
   international: {
     title: "International Perspective",
