@@ -15,7 +15,7 @@ export const corporate = {
       accent: "complexity.",
     } satisfies RichHeading,
     lede: "UGO N & Co. provides senior-level corporate finance and strategy support through fractional, interim and project-based engagements.",
-    body: "Led by Ugochi Nwoga, whose career has included senior leadership roles across finance, strategy, manufacturing, aerospace, international operations and business transformation, engagements combine financial discipline with an operator's understanding of how businesses actually work.",
+    body: "Led by Ugochi D. Nwoga, whose career has included senior leadership roles across finance, strategy, manufacturing, aerospace, international operations and business transformation, engagements combine financial discipline with an operator's understanding of how businesses actually work.",
     /* Design restatement of "fractional, interim and project-based engagements". */
     models: [
       { numeral: "i.", label: "Fractional" },
@@ -38,6 +38,21 @@ export const corporate = {
     },
     {
       numeral: "02",
+      title: "Financial Planning & Performance",
+      items: [
+        "Budgeting & forecasting",
+        "FP&A",
+        "Cash-flow forecasting",
+        "Working-capital management",
+        "Profitability analysis",
+        "Margin improvement",
+        "KPI development",
+        "Management reporting",
+        "Scenario planning",
+      ],
+    },
+    {
+      numeral: "03",
       title: "Strategy & Transformation",
       items: [
         "Strategic planning",
@@ -50,7 +65,7 @@ export const corporate = {
       ],
     },
     {
-      numeral: "03",
+      numeral: "04",
       title: "Transactions & Business Change",
       intro:
         "UGO N & Co. may support management teams through acquisitions, divestitures and other significant business events.",
@@ -68,6 +83,7 @@ export const corporate = {
     },
   ],
   international: {
+    numeral: "05",
     eyebrow: "Across Markets",
     title: "International Business",
     body: [

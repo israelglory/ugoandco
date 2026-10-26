@@ -50,7 +50,7 @@ export default function CorporatePage() {
         ruleBottom
         pt={120}
         pb={120}
-        innerClassName="grid grid-cols-[repeat(auto-fit,minmax(min(340px,100%),1fr))] gap-x-14 gap-y-16"
+        innerClassName="grid grid-cols-1 gap-x-14 gap-y-16 min-[900px]:grid-cols-2"
       >
         {services.map((service, i) => (
           <NumberedItem
@@ -62,7 +62,7 @@ export default function CorporatePage() {
             titleAs="h2"
             titleSize={34}
             className="gap-6"
-            {...reveal(i)}
+            {...reveal(i % 2)}
           >
             {service.intro && <Body className="text-[16px]">{service.intro}</Body>}
             {service.listLabel && <Eyebrow size="sm">{service.listLabel}</Eyebrow>}
@@ -74,6 +74,9 @@ export default function CorporatePage() {
 
       <Section innerClassName="flex flex-wrap items-center gap-x-24 gap-y-16">
         <div className="flex min-w-0 flex-[1_1_480px] flex-col gap-6" {...reveal(0)}>
+          <span aria-hidden="true" className="font-serif text-[64px] leading-none text-gold">
+            {international.numeral}
+          </span>
           <Eyebrow>{international.eyebrow}</Eyebrow>
           <Heading size={54}>{international.title}</Heading>
           {international.body.map((p) => (

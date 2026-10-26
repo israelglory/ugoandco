@@ -140,11 +140,11 @@ test.describe("contact form", () => {
   });
 
   test("pills toggle as checkboxes", async ({ page }) => {
-    const pill = page.getByRole("checkbox", { name: "Private Art", exact: true });
+    const pill = page.getByRole("checkbox", { name: "Private Art Acquisitions", exact: true });
     await expect(pill).not.toBeChecked();
-    await pills(page).getByText("Private Art", { exact: true }).click();
+    await pills(page).getByText("Private Art Acquisitions", { exact: true }).click();
     await expect(pill).toBeChecked();
-    await pills(page).getByText("Private Art", { exact: true }).click();
+    await pills(page).getByText("Private Art Acquisitions", { exact: true }).click();
     await expect(pill).not.toBeChecked();
   });
 

@@ -9,7 +9,7 @@ export const inquiryOptions = [
   "Corporate Finance & Strategy",
   "Fractional / Interim CFO",
   "Private Exhibition",
-  "Private Art",
+  "Private Art Acquisitions",
   "Corporate Art",
   "U.S.–Africa Opportunity",
   "Strategic Engagement",
@@ -35,7 +35,7 @@ export const contact = {
       body: "African contemporary art exhibitions and cultural experiences created for corporate and private audiences.",
     },
     {
-      title: "Private Art",
+      title: "Private Art Acquisitions",
       body: "African contemporary art sourcing, private opportunities, collector introductions and corporate art.",
     },
     {

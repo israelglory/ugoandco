@@ -14,7 +14,7 @@ export const navigation: LinkItem[] = [
   { label: "Home", href: routes.home },
   { label: "Corporate Finance & Strategy", href: routes.corporate },
   { label: "Private Exhibitions", href: routes.exhibitions },
-  { label: "Private Art", href: routes.privateArt },
+  { label: "Private Art Acquisitions", href: routes.privateArt },
   { label: "Strategic Engagements", href: routes.strategic },
   { label: "About", href: routes.about },
   { label: "Contact", href: routes.contact },
@@ -24,7 +24,7 @@ export const site = {
   name: "UGO N & Co.",
   tagline: "Experience. Relationships. Execution.",
   description:
-    "UGO N & Co. is a relationship-driven firm operating across business, African contemporary art and international opportunities.",
+    "UGO N & Co. is a relationship-driven firm operating across corporate finance and strategy, African contemporary art and strategic opportunities.",
   founder: "Ugochi D. Nwoga",
   skipLink: "Skip to content",
   homeLinkLabel: "UGO N & Co. home",
@@ -35,7 +35,7 @@ export const site = {
   },
   mainNavLabel: "Main",
   footer: {
-    areasLine: "Corporate Finance & Strategy · Private Exhibitions · Private Art · Strategic Engagements",
+    areasLine: "Corporate Finance & Strategy · Private Exhibitions · Private Art Acquisitions · Strategic Engagements",
     navigationLabel: "Navigation",
     navAriaLabel: "Footer",
     ovico: {

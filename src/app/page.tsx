@@ -8,14 +8,15 @@ import { NumberedItem } from "@/components/ui/NumberedItem";
 import { Section } from "@/components/ui/Section";
 import { TextLink } from "@/components/ui/TextLink";
 import { Body, Eyebrow, Heading, Lede, ShortRule } from "@/components/ui/Typography";
-import { home, homeMeta } from "@/content/home";
-import { reveal } from "@/lib/cn";
+import { home, homeFeatures, homeMeta } from "@/content/home";
+import { cn, reveal } from "@/lib/cn";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata(homeMeta, "/", { absoluteTitle: true });
 
 export default function HomePage() {
   const { hero, disciplines, whatWeDo, cta } = home;
+  const { exhibitions, corporate, global, founder } = homeFeatures;
 
   return (
     <>
@@ -103,6 +104,113 @@ export default function HomePage() {
         </div>
       </Section>
 
+      {/* 4. Featured Private Exhibitions */}
+      <Section variant="ink" clip innerClassName="flex flex-wrap items-center gap-x-20 gap-y-14">
+        <div className="flex min-w-0 flex-[1.15_1_520px] flex-col gap-6" {...reveal(0)}>
+          <Eyebrow>{exhibitions.eyebrow}</Eyebrow>
+          <Heading size={54} accent={exhibitions.title.accent}>
+            {exhibitions.title.text}
+          </Heading>
+          <ShortRule />
+          <Lede>{exhibitions.body}</Lede>
+          <div className="pt-2">
+            <Button href={exhibitions.link.href} variant="goldOutline">
+              {exhibitions.link.label}
+            </Button>
+          </div>
+        </div>
+        <div className="flex min-w-0 flex-[1_1_380px] justify-center" {...reveal(1)}>
+          <ImageFrame slot={exhibitions.image} aspect="5/6" tone="dark" className="max-w-[440px]">
+            <GoldRing className="-top-[10%] -right-[14%] w-[60%]" />
+          </ImageFrame>
+        </div>
+      </Section>
+
+      {/* 5. Featured Corporate Finance */}
+      <Section variant="paper" innerClassName="flex flex-wrap items-center gap-x-24 gap-y-14">
+        <div className="flex min-w-0 flex-[1_1_480px] flex-col gap-6" {...reveal(0)}>
+          <Eyebrow>{corporate.eyebrow}</Eyebrow>
+          <Heading size={54} accent={corporate.title.accent}>
+            {corporate.title.text}
+          </Heading>
+          <Lede>{corporate.body}</Lede>
+          <div className="pt-2">
+            <TextLink href={corporate.link.href}>{corporate.link.label}</TextLink>
+          </div>
+        </div>
+        <ol className="m-0 flex min-w-0 flex-[1_1_420px] list-none flex-col border-t border-ink p-0" {...reveal(1)}>
+          {corporate.practices.map((practice) => (
+            <li
+              key={practice.title}
+              className="flex items-baseline gap-5 border-b border-rule-strong py-[20px] font-serif text-[28px] leading-[1.2]"
+            >
+              <span aria-hidden="true" className="numeral text-[20px]">
+                {practice.numeral}
+              </span>
+              {practice.title}
+            </li>
+          ))}
+        </ol>
+      </Section>
+
+      {/* 6. International / Global Partnerships */}
+      <Section
+        variant="ink"
+        decor={<GoldRing tone="dark" className="-bottom-[220px] -left-[220px] w-[560px]" />}
+        innerClassName="flex flex-wrap items-center gap-x-24 gap-y-14"
+      >
+        <div className="flex min-w-0 flex-[1_1_480px] flex-col gap-6" {...reveal(0)}>
+          <Eyebrow>{global.eyebrow}</Eyebrow>
+          <Heading size={54}>{global.title}</Heading>
+          <Body strong>{global.body[0]}</Body>
+          <Body>{global.body[1]}</Body>
+          <div className="pt-4">
+            <Button href={global.link.href} variant="goldOutline">
+              {global.link.label}
+            </Button>
+          </div>
+        </div>
+        <ul className="m-0 flex min-w-0 flex-[1_1_420px] list-none flex-col border-t border-gold p-0" {...reveal(1)}>
+          {global.markets.map((market) => (
+            <li
+              key={market.label}
+              className={cn(
+                "border-b border-rule-dark py-[20px] font-serif text-[30px]",
+                market.primary ? "text-on-dark" : "text-on-dark-muted",
+              )}
+            >
+              {market.label}
+              {market.note && (
+                <>
+                  {" "}
+                  <em className="accent text-[22px]">{market.note}</em>
+                </>
+              )}
+            </li>
+          ))}
+        </ul>
+      </Section>
+
+      {/* 7. About Ugochi D. Nwoga */}
+      <Section innerClassName="flex flex-wrap items-center gap-x-24 gap-y-14">
+        <div className="min-w-0 flex-[1_1_360px]" {...reveal(0)}>
+          <ImageFrame slot={founder.portrait} aspect="4/5" frame="left" className="mx-auto max-w-[420px]" />
+        </div>
+        <div className="flex min-w-0 flex-[1.3_1_480px] flex-col gap-[22px]" {...reveal(1)}>
+          <Eyebrow>{founder.eyebrow}</Eyebrow>
+          <div className="flex flex-col gap-2">
+            <Heading size={54}>{founder.name}</Heading>
+            <p className="m-0 font-serif text-[24px] text-gold-text italic">{founder.role}</p>
+          </div>
+          <ShortRule />
+          <Lede>{founder.body}</Lede>
+          <div className="pt-2">
+            <TextLink href={founder.link.href}>{founder.link.label}</TextLink>
+          </div>
+        </div>
+      </Section>
+
+      {/* 8. Start a Conversation */}
       <Section variant="paper" ruleTop pt={120} pb={120} innerClassName="flex flex-col items-center gap-7 text-center">
         <div className="flex flex-col items-center gap-7" {...reveal(0)}>
           <Monogram width={84} />

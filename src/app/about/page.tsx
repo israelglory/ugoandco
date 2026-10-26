@@ -101,7 +101,10 @@ export default function AboutPage() {
             {education.degrees.map((item) => (
               <li key={item.degree} className="flex flex-col gap-1.5 border-b border-rule py-[26px]">
                 <span className="font-serif text-[30px] leading-[1.2]">{item.degree}</span>
-                <span className="body text-[15px]">{item.school}</span>
+                <span className="body text-[15px]">
+                  {item.school}
+                  {item.note && `, ${item.note}`}
+                </span>
               </li>
             ))}
           </ul>

@@ -36,6 +36,15 @@ for (const [label, width] of [
   for (const name of names) {
     await page.goto(baseUrl + PAGES[name], { waitUntil: "networkidle" });
     await page.evaluate(() => document.fonts.ready);
+    // Scroll through the page so lazily loaded images are fetched before the capture.
+    await page.evaluate(async () => {
+      for (let y = 0; y < document.body.scrollHeight; y += 600) {
+        window.scrollTo(0, y);
+        await new Promise((resolve) => setTimeout(resolve, 60));
+      }
+      window.scrollTo(0, 0);
+    });
+    await page.waitForLoadState("networkidle");
     await page.screenshot({ path: `${outDir}/${name}-${label}.png`, fullPage: true });
     console.log(`${name}-${label}.png`);
   }

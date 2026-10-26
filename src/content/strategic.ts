@@ -19,8 +19,7 @@ export const strategic = {
   },
   selective: {
     title: "These engagements are intentionally selective.",
-    lead: "We do not position the firm as having access to every executive, organization or opportunity.",
-    body: "Instead, we determine where our experience and relationships are relevant and establish a clear role before proceeding.",
+    body: "We focus on opportunities where our corporate experience, international perspective and relevant relationships can contribute meaningfully, establishing a clear role and objective before proceeding.",
   },
   panels: [
     {
@@ -39,13 +38,20 @@ export const strategic = {
     },
     {
       numeral: "03",
-      title: "U.S.–Africa Opportunities",
+      title: "Global Partnerships",
       tone: "paper",
-      lead: "UGO N & Co. has particular strength at the intersection of the United States and Africa.",
       body: [
-        "Our experience and relationships may support selected commercial, cultural and institutional opportunities connecting organizations across these markets.",
-        "Nigeria represents an area of particular familiarity, while our relationships extend more broadly across Africa and into other international markets.",
+        "Supporting selected relationships and partnerships across markets, particularly opportunities connecting the United States and Africa.",
       ],
+      // U.S.–Africa Opportunities sits beneath Global Partnerships.
+      sub: {
+        title: "U.S.–Africa Opportunities",
+        lead: "UGO N & Co. has particular strength at the intersection of the United States and Africa.",
+        body: [
+          "Our experience and relationships may support selected commercial, cultural and institutional opportunities connecting organizations across these markets.",
+          "Nigeria represents an area of particular familiarity, while our relationships extend more broadly across Africa and into other international markets.",
+        ],
+      },
     },
     {
       numeral: "04",
@@ -68,6 +74,7 @@ export const strategic = {
     tone?: "paper";
     lead?: string;
     body: string[];
+    sub?: { title: string; lead: string; body: string[] };
     chips?: string[];
   }[],
   transactions: {

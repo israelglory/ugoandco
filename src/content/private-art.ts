@@ -2,40 +2,24 @@ import { placeholderImages } from "./placeholder-images";
 import type { ImageSlot, PageMeta, RichHeading } from "./types";
 
 export const privateArtMeta: PageMeta = {
-  title: "Private Art",
+  title: "Private Art Acquisitions",
   description:
-    "UGO N & Co. facilitates select opportunities involving African contemporary art for collectors, corporations and private clients.",
+    "UGO N & Co. facilitates select acquisitions of African contemporary art for private collectors, corporations and other qualified clients.",
 };
 
 export const privateArt = {
   hero: {
-    eyebrow: "Private Art",
-    eyebrowSecondary: "African Contemporary Art",
+    eyebrow: "Private Art Acquisitions",
     title: {
-      text: "Select opportunities. Trusted relationships. Discreet execution.",
-      accent: "Discreet execution.",
+      text: "Thoughtfully sourced. Discreetly facilitated.",
+      accent: "Discreetly facilitated.",
     } satisfies RichHeading,
-    lede: "UGO N & Co. facilitates select opportunities involving African contemporary art for collectors, corporations and private clients.",
-    body: "Our role varies according to the engagement.",
-    image: { label: "Image · Artwork", image: placeholderImages.privateArtHero } satisfies ImageSlot,
-  },
-  scenarios: {
-    items: [
-      {
-        label: "The Collector",
-        text: "A client may be searching for a particular African artist, body of work or type of collection.",
-      },
-      {
-        label: "The Gallery or Artist",
-        text: "A gallery or artist may have work appropriate for a collector or corporate audience.",
-      },
-      {
-        label: "The Corporation",
-        text: "A corporation may be interested in acquiring African contemporary art for a particular environment or developing a broader cultural initiative.",
-      },
+    lede: "UGO N & Co. facilitates select acquisitions of African contemporary art for private collectors, corporations and other qualified clients.",
+    body: [
+      "Depending on the engagement, we may identify appropriate works, source opportunities through galleries and artists, facilitate introductions, or coordinate private acquisition opportunities.",
+      "Our approach is relationship-led and collaborative, drawing upon direct relationships and trusted partners across the African contemporary art ecosystem.",
     ],
-    closing:
-      "UGO N & Co. helps determine whether there is an appropriate fit and, where useful, facilitates the relationship.",
+    image: { label: "Image · Artwork", image: placeholderImages.privateArtHero } satisfies ImageSlot,
   },
   areas: {
     eyebrow: "How We Engage",
@@ -43,33 +27,33 @@ export const privateArt = {
     items: [
       {
         numeral: "01",
-        title: "Private Art Opportunities",
-        body: "Select opportunities involving African contemporary artwork, galleries, artists and collectors.",
+        title: "Artwork Sourcing & Acquisitions",
+        body: "Identifying appropriate works through artists, galleries, studios and trusted art-world relationships.",
       },
       {
         numeral: "02",
-        title: "Artwork Sourcing",
-        body: "Assistance identifying appropriate works through direct relationships, artists, galleries and trusted cultural partners.",
+        title: "Private Acquisition Opportunities",
+        body: "Facilitating access to select works that may be appropriate for individual collectors or corporate clients.",
       },
       {
         numeral: "03",
-        title: "Private Sales",
-        body: "Select facilitation of private African contemporary art opportunities where UGO N & Co. has an appropriate role.",
+        title: "Private Sale Opportunities",
+        body: "Supporting selected private transactions where UGO N & Co. has a clearly defined role and the appropriate parties are involved.",
       },
       {
         numeral: "04",
-        title: "Corporate Art",
-        body: "African contemporary artwork and artist relationships for corporate, hospitality and executive environments.",
+        title: "Corporate Collections",
+        body: "Helping corporations identify African contemporary art for executive, hospitality and corporate environments.",
       },
       {
         numeral: "05",
-        title: "Collector Introductions",
-        body: "Thoughtful introductions between collectors and appropriate artists, galleries or other art-market participants.",
+        title: "Collector & Gallery Introductions",
+        body: "Creating thoughtful introductions between collectors and appropriate galleries, artists and other art-market participants.",
       },
       {
         numeral: "06",
         title: "Exhibition Sourcing",
-        body: "Identifying African contemporary artists and works for corporate and private exhibitions created by UGO N & Co.",
+        body: "Identifying artists and works for private and corporate exhibitions developed by UGO N & Co.",
       },
     ],
   },
@@ -79,15 +63,14 @@ export const privateArt = {
     lead: "Where an artist is represented by a gallery, we work with the appropriate representative.",
     body: [
       "Our role may be to identify an opportunity, facilitate an introduction, create a private presentation or help move a conversation forward.",
-      "We do not position UGO N & Co. as the expert on every artist we present.",
+      "We work collaboratively with representing galleries, artists, estates and appropriate specialists, drawing upon their expertise in relation to individual artists, provenance, historical context, valuation and authentication where required.",
     ],
     closing:
       "Representing galleries, artists, estates, scholars and appropriate specialists remain important sources of expertise relating to individual artists, provenance, historical context, valuation and authentication.",
   },
   ovico: {
     eyebrow: "Ovico Gallery",
-    /* Source wording: "Owner and Curator". About and footer say "Co-owner". Open item for the client. */
-    title: "Founder Ugochi Nwoga is also Owner and Curator of Ovico Gallery, a contemporary African art gallery.",
+    title: "Ugochi D. Nwoga is also Co-owner and Curator of Ovico Gallery, a contemporary African art gallery.",
     body: [
       "Ovico Gallery remains a separate business.",
       "Where appropriate, Ovico Gallery may participate in a UGO N & Co. exhibition or art engagement alongside other galleries, artists and cultural partners.",

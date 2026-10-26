@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/Button";
 import { GoldRing } from "@/components/ui/GoldRing";
 import { ImageFrame } from "@/components/ui/ImageFrame";
-import { Monogram } from "@/components/ui/Monogram";
 import { NumberedItem } from "@/components/ui/NumberedItem";
 import { Section } from "@/components/ui/Section";
 import { Body, Eyebrow, Heading, Lede, ShortRule } from "@/components/ui/Typography";
@@ -14,51 +13,28 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata = pageMetadata(privateArtMeta, routes.privateArt);
 
 export default function PrivateArtPage() {
-  const { hero, scenarios, areas, collaborative, ovico } = privateArt;
+  const { hero, areas, collaborative, ovico } = privateArt;
 
   return (
     <>
       <Section clip pt={48} ptSm={40} pb={120} innerClassName="flex flex-wrap items-center gap-x-[88px] gap-y-16">
         <div className="flex min-w-0 flex-[1_1_540px] flex-col gap-7">
-          <div className="flex flex-wrap items-center gap-3.5">
-            <Eyebrow>{hero.eyebrow}</Eyebrow>
-            <span aria-hidden="true" className="h-3.5 w-px bg-gold" />
-            <Eyebrow tone="muted">{hero.eyebrowSecondary}</Eyebrow>
-          </div>
+          <Eyebrow>{hero.eyebrow}</Eyebrow>
           <Heading as="h1" size={76} accent={hero.title.accent}>
             {hero.title.text}
           </Heading>
           <ShortRule />
           <Lede>{hero.lede}</Lede>
-          <Body>{hero.body}</Body>
+          {hero.body.map((p) => (
+            <Body key={p}>{p}</Body>
+          ))}
         </div>
         <div className="flex min-w-0 flex-[1_1_400px] justify-center">
           <ImageFrame slot={hero.image} aspect="3/4" frame="right" eager className="max-w-[460px]" />
         </div>
       </Section>
 
-      <Section variant="paper" ruleTop ruleBottom pt={120} pb={120} innerClassName="flex flex-col gap-14">
-        <div className="grid grid-cols-1 gap-6 min-[900px]:grid-cols-3">
-          {scenarios.items.map((item, i) => (
-            <article
-              key={item.label}
-              className="flex flex-col gap-[22px] border border-rule bg-ivory px-[34px] py-10"
-              {...reveal(i)}
-            >
-              <Eyebrow as="h2" size="sm">
-                {item.label}
-              </Eyebrow>
-              <p className="m-0 font-serif text-[27px] leading-[1.3]">{item.text}</p>
-            </article>
-          ))}
-        </div>
-        <div className="flex flex-wrap items-center gap-7">
-          <Monogram width={56} />
-          <Lede className="min-w-0 flex-[1_1_480px] text-[21px] text-ink">{scenarios.closing}</Lede>
-        </div>
-      </Section>
-
-      <Section innerClassName="flex flex-col gap-16">
+      <Section ruleTop innerClassName="flex flex-col gap-16">
         <div className="flex flex-col gap-[22px]">
           <Eyebrow>{areas.eyebrow}</Eyebrow>
           <Heading size={60}>{areas.title}</Heading>
