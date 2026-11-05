@@ -28,49 +28,34 @@ export const privateArt = {
       {
         numeral: "01",
         title: "Artwork Sourcing & Acquisitions",
-        body: "Identifying appropriate works through artists, galleries, studios and trusted art-world relationships.",
+        // Exhibition sourcing folded in (formerly its own area).
+        body: "Identifying appropriate works through artists, galleries, studios and trusted art-world relationships, including artists and works for private and corporate exhibitions developed by UGO N & Co.",
       },
       {
         numeral: "02",
         title: "Private Acquisition Opportunities",
-        body: "Facilitating access to select works that may be appropriate for individual collectors or corporate clients.",
+        // Private sales folded in (formerly its own area).
+        body: "Facilitating access to select works that may be appropriate for individual collectors or corporate clients, including selected private sales where UGO N & Co. has a clearly defined role and the appropriate parties are involved.",
       },
       {
         numeral: "03",
-        title: "Private Sale Opportunities",
-        body: "Supporting selected private transactions where UGO N & Co. has a clearly defined role and the appropriate parties are involved.",
-      },
-      {
-        numeral: "04",
         title: "Corporate Collections",
         body: "Helping corporations identify African contemporary art for executive, hospitality and corporate environments.",
       },
       {
-        numeral: "05",
+        numeral: "04",
         title: "Collector & Gallery Introductions",
         body: "Creating thoughtful introductions between collectors and appropriate galleries, artists and other art-market participants.",
-      },
-      {
-        numeral: "06",
-        title: "Exhibition Sourcing",
-        body: "Identifying artists and works for private and corporate exhibitions developed by UGO N & Co.",
       },
     ],
   },
   collaborative: {
-    eyebrow: "A Collaborative Model",
-    title: "UGO N & Co. respects existing artist and gallery relationships.",
-    lead: "Where an artist is represented by a gallery, we work with the appropriate representative.",
-    body: [
-      "Our role may be to identify an opportunity, facilitate an introduction, create a private presentation or help move a conversation forward.",
-      "We work collaboratively with representing galleries, artists, estates and appropriate specialists, drawing upon their expertise in relation to individual artists, provenance, historical context, valuation and authentication where required.",
-    ],
-    closing:
-      "Representing galleries, artists, estates, scholars and appropriate specialists remain important sources of expertise relating to individual artists, provenance, historical context, valuation and authentication.",
+    title: "A Collaborative Approach",
+    body: "UGO N & Co. works with artists, representing galleries, estates and trusted specialists as appropriate. Our role is to identify opportunities, facilitate relationships and help clients navigate acquisitions while respecting existing artist and gallery representation.",
   },
   ovico: {
     eyebrow: "Ovico Gallery",
-    title: "Ugochi D. Nwoga is also Co-owner and Curator of Ovico Gallery, a contemporary African art gallery.",
+    title: "Ugochi D. Nwoga is Co-owner and Curator of Ovico Gallery, a contemporary African art gallery.",
     body: [
       "Ovico Gallery remains a separate business.",
       "Where appropriate, Ovico Gallery may participate in a UGO N & Co. exhibition or art engagement alongside other galleries, artists and cultural partners.",

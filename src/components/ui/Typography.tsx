@@ -53,13 +53,28 @@ export function Heading({ as = "h2", look, size, sizeSm, statement, accent, id, 
 
 function withAccent(text: string, accent?: string) {
   const at = accent ? text.indexOf(accent) : -1;
-  if (!accent || at < 0) return text;
+  if (!accent || at < 0) return keepCompoundsTogether(text);
   return (
     <>
-      {text.slice(0, at)}
+      {keepCompoundsTogether(text.slice(0, at))}
       <em className="accent">{accent}</em>
-      {text.slice(at + accent.length)}
+      {keepCompoundsTogether(text.slice(at + accent.length))}
     </>
+  );
+}
+
+/** Stops headings breaking inside en-dash compounds such as "U.S.–Africa". */
+function keepCompoundsTogether(text: string) {
+  const parts = text.split(/(\S+–\S+)/);
+  if (parts.length === 1) return text;
+  return parts.map((part, i) =>
+    i % 2 === 1 ? (
+      <span key={i} className="whitespace-nowrap">
+        {part}
+      </span>
+    ) : (
+      part
+    ),
   );
 }
 

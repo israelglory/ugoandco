@@ -19,7 +19,7 @@ export const strategic = {
   },
   selective: {
     title: "These engagements are intentionally selective.",
-    body: "We focus on opportunities where our corporate experience, international perspective and relevant relationships can contribute meaningfully, establishing a clear role and objective before proceeding.",
+    body: "We focus on opportunities where our experience, international perspective and relevant relationships can contribute meaningfully to a clearly defined objective.",
   },
   panels: [
     {
@@ -38,20 +38,14 @@ export const strategic = {
     },
     {
       numeral: "03",
-      title: "Global Partnerships",
+      title: "Global Partnerships & U.S.–Africa Opportunities",
       tone: "paper",
       body: [
         "Supporting selected relationships and partnerships across markets, particularly opportunities connecting the United States and Africa.",
+        "UGO N & Co. has particular strength at the intersection of the United States and Africa.",
+        "Our experience and relationships may support selected commercial, cultural and institutional opportunities connecting organizations across these markets.",
+        "Nigeria represents an area of particular familiarity, while our relationships extend more broadly across Africa and into other international markets.",
       ],
-      // U.S.–Africa Opportunities sits beneath Global Partnerships.
-      sub: {
-        title: "U.S.–Africa Opportunities",
-        lead: "UGO N & Co. has particular strength at the intersection of the United States and Africa.",
-        body: [
-          "Our experience and relationships may support selected commercial, cultural and institutional opportunities connecting organizations across these markets.",
-          "Nigeria represents an area of particular familiarity, while our relationships extend more broadly across Africa and into other international markets.",
-        ],
-      },
     },
     {
       numeral: "04",
@@ -74,7 +68,6 @@ export const strategic = {
     tone?: "paper";
     lead?: string;
     body: string[];
-    sub?: { title: string; lead: string; body: string[] };
     chips?: string[];
   }[],
   transactions: {

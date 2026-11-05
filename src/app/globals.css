@@ -128,6 +128,7 @@
     font-size: var(--fs, 30px);
     font-weight: 500;
     line-height: 1.15;
+    text-wrap: balance;
   }
   .statement {
     font-style: italic;

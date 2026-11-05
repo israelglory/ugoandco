@@ -56,17 +56,6 @@ export default function StrategicEngagementsPage() {
             {panel.body.map((p) => (
               <Body key={p}>{p}</Body>
             ))}
-            {panel.sub && (
-              <div className="mt-2 flex flex-col gap-5 border-t border-rule-strong pt-7">
-                <Heading as="h3" size={28}>
-                  {panel.sub.title}
-                </Heading>
-                <Body strong>{panel.sub.lead}</Body>
-                {panel.sub.body.map((p) => (
-                  <Body key={p}>{p}</Body>
-                ))}
-              </div>
-            )}
             {panel.chips && (
               <ul className="m-0 flex list-none flex-wrap gap-2.5 p-0">
                 {panel.chips.map((chip) => (

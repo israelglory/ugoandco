@@ -1,3 +1,4 @@
+import homeExhibitionsPhoto from "@/assets/images/home-exhibitions.jpg";
 import homeHeroPhoto from "@/assets/images/home-hero.jpg";
 import { about } from "./about";
 import { corporate } from "./corporate";
@@ -9,7 +10,7 @@ import type { ImageSlot, PageMeta, RichHeading } from "./types";
 export const homeMeta: PageMeta = {
   title: "UGO N & Co.",
   description:
-    "UGO N & Co. is a relationship-driven firm operating across corporate finance and strategy, African contemporary art and strategic opportunities.",
+    "UGO N & Co. is a relationship-driven firm working across finance and strategy, African contemporary art and global partnerships.",
 };
 
 export const home = {
@@ -19,8 +20,8 @@ export const home = {
       text: "Where experience, relationships and opportunity come together.",
       accent: "opportunity",
     } satisfies RichHeading,
-    lede: "UGO N & Co. is a relationship-driven firm operating across corporate finance and strategy, African contemporary art and strategic opportunities.",
-    body: "We provide senior-level corporate finance and strategy support, create private African contemporary art exhibitions, facilitate select art acquisitions, and undertake strategic engagements where our experience, relationships and ability to execute can create meaningful value.",
+    lede: "UGO N & Co. is a relationship-driven firm working across finance and strategy, African contemporary art and global partnerships.",
+    body: "We provide senior-level corporate finance leadership, create private art experiences and acquisitions, and undertake select strategic engagements across markets.",
     primaryCta: { label: "Explore Our Work", href: "#work" },
     secondaryCta: { label: "Start a Conversation", href: routes.contact },
     image: {
@@ -38,7 +39,7 @@ export const home = {
     eyebrow: "What We Do",
     title: { text: "Experience. Relationships. Execution.", accent: "Execution." } satisfies RichHeading,
     intro: [
-      "UGO N & Co. brings together corporate leadership experience, entrepreneurial perspective, international relationships and established relationships across African contemporary art.",
+      "UGO N & Co. brings together corporate leadership experience, entrepreneurial perspective, international relationships and relationships across the African contemporary art ecosystem.",
     ],
     introStrong: "Our work is organized around four areas.",
     services: [
@@ -85,7 +86,7 @@ export const home = {
   },
 };
 
-const globalPartnerships = strategic.panels.find((panel) => panel.title === "Global Partnerships")!;
+const globalPartnerships = strategic.panels.find((panel) => panel.title.startsWith("Global Partnerships"))!;
 
 /*
  * Homepage sections 4 to 7. The revision names these sections without new copy, so each
@@ -96,7 +97,14 @@ export const homeFeatures = {
     eyebrow: exhibitions.hero.eyebrow,
     title: exhibitions.hero.title,
     body: exhibitions.hero.lede,
-    image: exhibitions.hero.image,
+    image: {
+      label: exhibitions.hero.image.label,
+      image: {
+        src: homeExhibitionsPhoto,
+        alt: "A woman speaking to guests at a gallery event, with paintings on the walls around them",
+        position: "74% 50%",
+      },
+    } satisfies ImageSlot,
     link: { label: "Discover Private Exhibitions", href: routes.exhibitions },
   },
   corporate: {
@@ -111,7 +119,7 @@ export const homeFeatures = {
   },
   global: {
     eyebrow: corporate.international.eyebrow,
-    title: globalPartnerships.title,
+    title: home.disciplines[2],
     body: [globalPartnerships.body[0], corporate.international.body[0]],
     markets: corporate.international.markets,
     link: { label: "Explore Strategic Engagements", href: routes.strategic },

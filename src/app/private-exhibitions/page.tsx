@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/Button";
 import { ConceptCard, Tile } from "@/components/ui/Cards";
 import { GoldRing } from "@/components/ui/GoldRing";
 import { ImageFrame } from "@/components/ui/ImageFrame";
-import { RuledList } from "@/components/ui/RuledList";
 import { Section } from "@/components/ui/Section";
 import { Body, Eyebrow, FinePrint, Heading, Lede, ShortRule } from "@/components/ui/Typography";
 import { exhibitions, exhibitionsMeta } from "@/content/exhibitions";
@@ -109,18 +108,11 @@ export default function PrivateExhibitionsPage() {
           <Eyebrow>{concepts.eyebrow}</Eyebrow>
           <Heading size={56}>{concepts.title}</Heading>
         </div>
-        <div className="grid grid-cols-1 gap-px border border-rule-dark bg-rule-dark min-[600px]:grid-cols-2 min-[1180px]:grid-cols-4">
+        <div className="grid grid-cols-1 gap-px border border-rule-dark bg-rule-dark min-[900px]:grid-cols-3">
           {concepts.items.map((item, i) => (
             <ConceptCard key={item.title} numeral={item.numeral} title={item.title} body={[item.body]} {...reveal(i)} />
           ))}
         </div>
-        <ConceptCard
-          featured
-          numeral={concepts.featured.numeral}
-          title={concepts.featured.title}
-          body={concepts.featured.body}
-          {...reveal(0)}
-        />
       </Section>
 
       <Section pb={112} innerClassName="flex flex-col items-center gap-[26px] text-center">
@@ -138,14 +130,9 @@ export default function PrivateExhibitionsPage() {
       <Section ruleTop pt={112} pb={112} innerClassName="flex flex-wrap gap-x-24 gap-y-14">
         <div className="flex min-w-0 flex-[1_1_340px] flex-col gap-[22px]">
           <Heading size={52}>{experience.title}</Heading>
-          <Body>{experience.intro}</Body>
         </div>
-        <div className="flex min-w-0 flex-[2_1_560px] flex-col gap-7" {...reveal(1)}>
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(min(240px,100%),1fr))] gap-x-10">
-            {experience.columns.map((column) => (
-              <RuledList key={column[0]} items={column} top="ink" />
-            ))}
-          </div>
+        <div className="flex min-w-0 flex-[2_1_560px] flex-col gap-7 border-t border-ink pt-8" {...reveal(1)}>
+          <Lede>{experience.body}</Lede>
           <FinePrint>{experience.note}</FinePrint>
         </div>
       </Section>

@@ -1,7 +1,7 @@
 import { ContactForm } from "@/components/contact/ContactForm";
 import { GoldRing } from "@/components/ui/GoldRing";
 import { Section } from "@/components/ui/Section";
-import { Body, Eyebrow, Heading, Lede, ShortRule } from "@/components/ui/Typography";
+import { Eyebrow, Heading, Lede, ShortRule } from "@/components/ui/Typography";
 import { contact, contactMeta, inquiryOptions } from "@/content/contact";
 import { routes } from "@/content/site";
 import { pageMetadata } from "@/lib/metadata";
@@ -9,7 +9,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata = pageMetadata(contactMeta, routes.contact);
 
 export default function ContactPage() {
-  const { hero, areas, form } = contact;
+  const { hero, form } = contact;
 
   return (
     <Section
@@ -26,16 +26,6 @@ export default function ContactPage() {
         </Heading>
         <ShortRule />
         <Lede>{hero.lede}</Lede>
-        <div className="mt-3 flex flex-col border-t border-ink">
-          {areas.map((area) => (
-            <div key={area.title} className="flex flex-col gap-2 border-b border-rule py-6">
-              <Heading look="h3" size={26}>
-                {area.title}
-              </Heading>
-              <Body className="text-[15px] leading-[1.65]">{area.body}</Body>
-            </div>
-          ))}
-        </div>
       </div>
 
       <ContactForm content={form} options={inquiryOptions} />

@@ -2,14 +2,15 @@ import type { PageMeta, RichHeading } from "./types";
 
 export const contactMeta: PageMeta = {
   title: "Contact",
-  description: "UGO N & Co. welcomes thoughtful inquiries across its four areas of engagement.",
+  description:
+    "Whether you're exploring a finance and strategy engagement, private exhibition, art acquisition, global partnership or special project, we'd welcome an initial conversation.",
 };
 
 export const inquiryOptions = [
   "Corporate Finance & Strategy",
   "Fractional / Interim CFO",
   "Private Exhibition",
-  "Private Art Acquisitions",
+  "Private Art Acquisition",
   "Corporate Art",
   "U.S.–Africa Opportunity",
   "Strategic Engagement",
@@ -23,26 +24,8 @@ export const contact = {
   hero: {
     eyebrow: "Contact",
     title: { text: "Start a Conversation", accent: "Conversation" } satisfies RichHeading,
-    lede: "UGO N & Co. welcomes thoughtful inquiries across its four areas of engagement.",
+    lede: "Whether you're exploring a finance and strategy engagement, private exhibition, art acquisition, global partnership or special project, we'd welcome an initial conversation.",
   },
-  areas: [
-    {
-      title: "Corporate Finance & Strategy",
-      body: "Fractional and interim CFO support, financial strategy, performance improvement, transformation and special finance projects.",
-    },
-    {
-      title: "Private Exhibitions",
-      body: "African contemporary art exhibitions and cultural experiences created for corporate and private audiences.",
-    },
-    {
-      title: "Private Art Acquisitions",
-      body: "African contemporary art sourcing, private opportunities, collector introductions and corporate art.",
-    },
-    {
-      title: "Strategic Engagements",
-      body: "Business development, international opportunities, strategic introductions and special projects.",
-    },
-  ],
   form: {
     label: "Contact Form",
     fields: {

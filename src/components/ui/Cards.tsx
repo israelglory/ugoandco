@@ -26,37 +26,10 @@ type ConceptCardProps = BaseProps & {
   numeral: string;
   title: string;
   body: string[];
-  /** The wide fifth card with a full gold border. */
-  featured?: boolean;
 };
 
 /** Dark-grid exhibition concept. */
-export function ConceptCard({ numeral, title, body, featured, className, ...rest }: ConceptCardProps) {
-  if (featured) {
-    return (
-      <article
-        className={cn("flex flex-wrap items-center gap-x-20 gap-y-8 border border-gold px-11 py-12", className)}
-        {...rest}
-      >
-        <div className="flex min-w-0 flex-[1_1_300px] flex-col gap-3.5">
-          <span aria-hidden="true" className="numeral text-[20px]">
-            {numeral}
-          </span>
-          <Heading as="h3" size={38}>
-            {title}
-          </Heading>
-        </div>
-        <div className="flex min-w-0 flex-[2_1_480px] flex-col gap-3.5">
-          {body.map((p, i) => (
-            <Body key={p} strong={i === 0}>
-              {p}
-            </Body>
-          ))}
-        </div>
-      </article>
-    );
-  }
-
+export function ConceptCard({ numeral, title, body, className, ...rest }: ConceptCardProps) {
   return (
     <article className={cn("flex min-h-[340px] flex-col gap-5 bg-ink px-8 py-10", className)} {...rest}>
       <span aria-hidden="true" className="numeral text-[20px]">

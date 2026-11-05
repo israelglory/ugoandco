@@ -39,7 +39,7 @@ export default function PrivateArtPage() {
           <Eyebrow>{areas.eyebrow}</Eyebrow>
           <Heading size={60}>{areas.title}</Heading>
         </div>
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(340px,100%),1fr))] gap-x-14 border-t border-ink">
+        <div className="grid grid-cols-1 gap-x-14 border-t border-ink min-[800px]:grid-cols-2">
           {areas.items.map((item, i) => (
             <NumberedItem
               key={item.title}
@@ -47,7 +47,7 @@ export default function PrivateArtPage() {
               title={item.title}
               titleSize={30}
               className="gap-4 border-b border-rule pt-10 pb-11"
-              {...reveal(i % 3)}
+              {...reveal(i % 2)}
             >
               <Body className="text-[16px]">{item.body}</Body>
             </NumberedItem>
@@ -58,18 +58,13 @@ export default function PrivateArtPage() {
       <Section
         variant="ink"
         decor={<GoldRing tone="dark" className="-bottom-[220px] -left-[220px] w-[560px]" />}
-        innerClassName="flex flex-wrap gap-x-24 gap-y-14"
+        innerClassName="flex flex-wrap items-center gap-x-24 gap-y-10"
       >
         <div className="flex min-w-0 flex-[1_1_440px] flex-col gap-6" {...reveal(0)}>
-          <Eyebrow>{collaborative.eyebrow}</Eyebrow>
           <Heading size={54}>{collaborative.title}</Heading>
         </div>
         <div className="flex min-w-0 flex-[1_1_460px] flex-col gap-5" {...reveal(1)}>
-          <Body strong>{collaborative.lead}</Body>
-          {collaborative.body.map((p) => (
-            <Body key={p}>{p}</Body>
-          ))}
-          <Body className="border-t border-circle-dark pt-5">{collaborative.closing}</Body>
+          <Body strong>{collaborative.body}</Body>
         </div>
       </Section>
 

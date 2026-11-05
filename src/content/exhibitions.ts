@@ -1,4 +1,5 @@
-import { placeholderImages } from "./placeholder-images";
+import exhibitionsDetailPhoto from "@/assets/images/exhibitions-detail.jpg";
+import exhibitionsHeroPhoto from "@/assets/images/exhibitions-hero.jpg";
 import { routes } from "./site";
 import type { ImageSlot, PageMeta, RichHeading } from "./types";
 
@@ -19,7 +20,10 @@ export const exhibitions = {
     cta: { label: "Discuss a Private Exhibition", href: routes.contact },
     image: {
       label: "Image · Private exhibition installation",
-      image: placeholderImages.exhibitionsHero,
+      image: {
+        src: exhibitionsHeroPhoto,
+        alt: "A framed painting of the crucifixion in orange and red tones, hanging on a gallery wall",
+      },
     } satisfies ImageSlot,
   },
   audience: {
@@ -40,7 +44,13 @@ export const exhibitions = {
       "Our role is not to present African contemporary art as a single aesthetic or narrative.",
     ],
     closing: "Instead, each exhibition is developed around individual artistic practices and a clear curatorial idea.",
-    image: { label: "Image · Artwork detail", image: placeholderImages.exhibitionsDetail } satisfies ImageSlot,
+    image: {
+      label: "Image · Artwork detail",
+      image: {
+        src: exhibitionsDetailPhoto,
+        alt: "A visitor in a flat cap looking at a large, colorful abstract painting in a gallery",
+      },
+    } satisfies ImageSlot,
   },
   experiences: {
     eyebrow: "Private Client Experiences",
@@ -64,8 +74,8 @@ export const exhibitions = {
     items: [
       {
         numeral: "I",
-        title: "Contemporary Africa: Perspectives & Possibilities",
-        body: "A presentation of distinct artistic practices emerging from and engaging with contemporary Africa.",
+        title: "Art, Capital & Legacy",
+        body: "A private exhibition exploring art, collecting and cultural legacy through contemporary African artistic practices.",
       },
       {
         numeral: "II",
@@ -74,23 +84,10 @@ export const exhibitions = {
       },
       {
         numeral: "III",
-        title: "Art, Capital & Legacy",
-        body: "A private exhibition exploring art, collecting and cultural legacy through contemporary African artistic practices.",
-      },
-      {
-        numeral: "IV",
         title: "The African Collector's Salon",
         body: "An intimate presentation introducing selected artists and works to a private audience.",
       },
     ],
-    featured: {
-      numeral: "V",
-      title: "Africa & the Diaspora",
-      body: [
-        "For selected exhibitions, African contemporary artists may be presented in dialogue with artists of African descent working elsewhere in the world.",
-        "The focus, however, remains anchored in contemporary African art and its broader global conversations.",
-      ],
-    },
   },
   howWeWork: {
     eyebrow: "How We Work",
@@ -102,26 +99,7 @@ export const exhibitions = {
   },
   experience: {
     title: "The Experience",
-    intro: "Depending upon the engagement, UGO N & Co. may coordinate:",
-    columns: [
-      [
-        "Exhibition concept development",
-        "Artist and artwork identification",
-        "Gallery and studio relationships",
-        "Artwork availability",
-        "Exhibition planning",
-        "Installation coordination",
-        "Artist participation",
-      ],
-      [
-        "Exhibition materials",
-        "Private previews",
-        "Collector conversations",
-        "Artwork inquiries",
-        "Acquisition introductions",
-        "Post-event follow-up",
-      ],
-    ],
+    body: "UGO N & Co. develops the concept, identifies appropriate artists and works, coordinates with galleries and studios, oversees exhibition planning and facilitates private collector engagement and acquisition inquiries.",
     note: "Specialized art handlers, insurers, logistics providers and installation professionals are engaged where appropriate.",
   },
   whoWeWorkWith: {

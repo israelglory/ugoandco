@@ -24,7 +24,7 @@ export const site = {
   name: "UGO N & Co.",
   tagline: "Experience. Relationships. Execution.",
   description:
-    "UGO N & Co. is a relationship-driven firm operating across corporate finance and strategy, African contemporary art and strategic opportunities.",
+    "UGO N & Co. is a relationship-driven firm working across finance and strategy, African contemporary art and global partnerships.",
   founder: "Ugochi D. Nwoga",
   skipLink: "Skip to content",
   homeLinkLabel: "UGO N & Co. home",
