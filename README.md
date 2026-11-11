@@ -82,7 +82,7 @@ Contact form messages (success, error, validation and the "Sending…" label) ar
 
 Every image slot is an `ImageSlot` in a content module: a `label` for the hatched placeholder, plus an optional `image` (`src`, `alt`, and an optional `position` for the crop, as CSS `object-position`).
 
-Final photos are set directly in the page's content module and live in `src/assets/images/`. Slots still waiting for final photography show **temporary event and gallery photos**, defined in one place: [`src/content/placeholder-images.ts`](src/content/placeholder-images.ts) (files in `src/assets/images/placeholders/`). Remove an entry's `image` to go back to the hatched placeholder.
+Photos are set directly in the page's content module and live in `src/assets/images/`. Remove a slot's `image` to go back to the hatched placeholder.
 
 To add a final photo:
 
@@ -95,16 +95,20 @@ To add a final photo:
    image: { label: "Image · Featured artwork", image: { src: homeHeroPhoto, alt: "Describe what the photo shows", position: "50% 18%" } },
    ```
 
-Static imports give Next.js the dimensions, a content hash and responsive WebP output. Hero images load eagerly; the rest load lazily.
+Static imports give Next.js the dimensions, a content hash and responsive WebP output. The Home and Private Art Acquisitions hero images load eagerly; the rest load lazily.
 
-| Slot                            | Aspect ratio | Current image                                                         |
-| ------------------------------- | ------------ | --------------------------------------------------------------------- |
-| Home hero, featured artwork     | 4:5          | Final: `home-hero.jpg` (set in `home.ts`)                             |
-| Exhibitions hero, installation  | 5:6          | Temporary: `exhibitionsHero` in `placeholder-images.ts`               |
-| Exhibitions, artwork detail     | 4:5          | Temporary: `exhibitionsDetail`                                        |
-| Private Art hero, artwork       | 3:4          | Temporary: `privateArtHero`                                           |
-| Private Art, Ovico Gallery      | 4:3          | Temporary: `ovicoGallery`                                             |
-| About, portrait of Ugochi Nwoga | 4:5          | Final: `ugochi-nwoga.jpg` (set in `about.ts`), photo by Kyle Harrison |
+| Slot                                     | Aspect ratio           | Image (content module)                                  |
+| ---------------------------------------- | ---------------------- | ------------------------------------------------------- |
+| Home hero                                | 4:5                    | `home-hero.jpg` (`home.ts`)                             |
+| Home, Featured Private Exhibitions       | 5:6                    | `home-exhibitions.jpg` (`home.ts`)                      |
+| Home and About, portrait of Ugochi Nwoga | 4:5                    | `ugochi-nwoga.jpg` (`about.ts`), photo by Kyle Harrison |
+| Corporate Finance & Strategy banner      | 21:9 (3:2 below 768px) | `corporate-boardroom.jpg` (`corporate.ts`, `banner`)    |
+| Private Exhibitions hero                 | 5:6                    | `exhibitions-hero.jpg` (`exhibitions.ts`)               |
+| Private Art Acquisitions hero            | 3:4                    | `private-art-hero.jpg` (`private-art.ts`)               |
+| Private Art Acquisitions, Ovico Gallery  | 4:5                    | `ovico-ugochi.jpg` (`private-art.ts`)                   |
+| Strategic Engagements banner             | 21:9 (3:2 below 768px) | `strategic-lounge.jpg` (`strategic.ts`, `banner`)       |
+
+The two banners are optional: set `banner` to `null` to remove the band from the page.
 
 ## Ovico Gallery link
 

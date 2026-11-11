@@ -1,5 +1,5 @@
 import ovicoPhoto from "@/assets/images/ovico-ugochi.jpg";
-import { placeholderImages } from "./placeholder-images";
+import privateArtHeroPhoto from "@/assets/images/private-art-hero.jpg";
 import type { ImageSlot, PageMeta, RichHeading } from "./types";
 
 export const privateArtMeta: PageMeta = {
@@ -20,7 +20,13 @@ export const privateArt = {
       "Depending on the engagement, we may identify appropriate works, source opportunities through galleries and artists, facilitate introductions, or coordinate private acquisition opportunities.",
       "Our approach is relationship-led and collaborative, drawing upon direct relationships and trusted partners across the African contemporary art ecosystem.",
     ],
-    image: { label: "Image · Artwork", image: placeholderImages.privateArtHero } satisfies ImageSlot,
+    image: {
+      label: "Image · Artwork",
+      image: {
+        src: privateArtHeroPhoto,
+        alt: "A gallery corner with an orange painting of a figure seen from behind, a yellow painting and a large unframed canvas of patterned figures above a dark sofa",
+      },
+    } satisfies ImageSlot,
   },
   areas: {
     eyebrow: "How We Engage",
