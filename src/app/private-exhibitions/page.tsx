@@ -12,7 +12,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata = pageMetadata(exhibitionsMeta, routes.exhibitions);
 
 export default function PrivateExhibitionsPage() {
-  const { hero, audience, why, experiences, concepts, howWeWork, experience, whoWeWorkWith } = exhibitions;
+  const { hero, audience, experiences, concepts, howWeWork, experience, whoWeWorkWith } = exhibitions;
 
   return (
     <>
@@ -65,21 +65,7 @@ export default function PrivateExhibitionsPage() {
         </div>
       </Section>
 
-      <Section variant="paper" ruleTop ruleBottom innerClassName="flex flex-wrap items-center gap-x-24 gap-y-16">
-        <div className="min-w-0 flex-[1_1_400px]" {...reveal(0)}>
-          <ImageFrame slot={why.image} aspect="4/5" />
-        </div>
-        <div className="flex min-w-0 flex-[1_1_520px] flex-col gap-[22px]" {...reveal(1)}>
-          <Eyebrow as="h2">{why.eyebrow}</Eyebrow>
-          <Lede className="font-serif text-[24px] leading-[1.45] text-ink">{why.statement}</Lede>
-          {why.body.map((p) => (
-            <Body key={p}>{p}</Body>
-          ))}
-          <Body strong>{why.closing}</Body>
-        </div>
-      </Section>
-
-      <Section innerClassName="flex flex-col gap-14">
+      <Section ruleTop innerClassName="flex flex-col gap-14">
         <div className="flex flex-wrap items-end gap-x-24 gap-y-8">
           <div className="flex min-w-0 flex-[1_1_440px] flex-col gap-[22px]">
             <Eyebrow>{experiences.eyebrow}</Eyebrow>

@@ -1,20 +1,17 @@
 import Link from "next/link";
 import { Arrow } from "@/components/ui/Arrow";
-import { Button } from "@/components/ui/Button";
-import { GoldRing } from "@/components/ui/GoldRing";
 import { ImageFrame } from "@/components/ui/ImageFrame";
 import { Section } from "@/components/ui/Section";
 import { Body, Eyebrow, Heading, Lede, ShortRule } from "@/components/ui/Typography";
 import { about, aboutMeta } from "@/content/about";
 import { routes } from "@/content/site";
-import { OVICO_URL } from "@/lib/config";
 import { reveal } from "@/lib/cn";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata(aboutMeta, routes.about);
 
 export default function AboutPage() {
-  const { hero, approach, founder, international, education, ovico } = about;
+  const { hero, approach, founder } = about;
 
   return (
     <>
@@ -81,54 +78,17 @@ export default function AboutPage() {
           ))}
           <Body strong>{founder.closing}</Body>
         </div>
-      </Section>
 
-      <Section
-        ruleTop
-        pt={120}
-        pb={128}
-        innerClassName="grid grid-cols-[repeat(auto-fit,minmax(min(460px,100%),1fr))] gap-x-24 gap-y-[72px]"
-      >
-        <div className="flex flex-col gap-[22px]" {...reveal(0)}>
-          <Heading size={48}>{international.title}</Heading>
-          {international.body.map((p) => (
-            <Body key={p}>{p}</Body>
-          ))}
-        </div>
-        <div className="flex flex-col gap-[22px]" {...reveal(1)}>
-          <Heading size={48}>{education.title}</Heading>
-          <ul className="m-0 flex list-none flex-col border-t border-ink p-0">
-            {education.degrees.map((item) => (
-              <li key={item.degree} className="flex flex-col gap-1.5 border-b border-rule py-[26px]">
-                <span className="font-serif text-[30px] leading-[1.2]">{item.degree}</span>
-                <span className="body text-[15px]">
-                  {item.school}
-                  {item.note && `, ${item.note}`}
-                </span>
+        <div className="flex basis-full flex-col gap-6 border-t border-ink pt-10" {...reveal(0)}>
+          <Eyebrow as="h3">{founder.highlights.label}</Eyebrow>
+          <ul className="m-0 grid list-none grid-cols-1 gap-x-8 gap-y-8 p-0 min-[560px]:grid-cols-2 min-[1100px]:grid-cols-4">
+            {founder.highlights.items.map((item) => (
+              <li key={item.figure} className="flex flex-col gap-2 border-l border-gold pl-5">
+                <span className="font-serif text-[44px] leading-none text-gold-text">{item.figure}</span>
+                <span className="body text-[15px] leading-[1.6]">{item.text}</span>
               </li>
             ))}
           </ul>
-        </div>
-      </Section>
-
-      <Section
-        variant="ink"
-        pt={120}
-        pb={120}
-        decor={<GoldRing tone="dark" className="-right-[180px] -bottom-[280px] w-[620px]" />}
-        innerClassName="flex flex-wrap items-center gap-x-24 gap-y-12"
-      >
-        <div className="flex min-w-0 flex-[1_1_420px] flex-col gap-[22px]" {...reveal(0)}>
-          <Eyebrow>{ovico.eyebrow}</Eyebrow>
-          <Heading size={50}>{ovico.title}</Heading>
-        </div>
-        <div className="flex min-w-0 flex-[1_1_420px] flex-col gap-6" {...reveal(1)}>
-          <Body>{ovico.body}</Body>
-          <div>
-            <Button href={OVICO_URL} external variant="goldOutline">
-              {ovico.linkLabel}
-            </Button>
-          </div>
         </div>
       </Section>
     </>

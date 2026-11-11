@@ -1,4 +1,3 @@
-import exhibitionsDetailPhoto from "@/assets/images/exhibitions-detail.jpg";
 import exhibitionsHeroPhoto from "@/assets/images/exhibitions-hero.jpg";
 import { routes } from "./site";
 import type { ImageSlot, PageMeta, RichHeading } from "./types";
@@ -22,7 +21,7 @@ export const exhibitions = {
       label: "Image · Private exhibition installation",
       image: {
         src: exhibitionsHeroPhoto,
-        alt: "A framed painting of the crucifixion in orange and red tones, hanging on a gallery wall",
+        alt: "A visitor looking up at a large abstract painting of a face in a gallery room hung with paintings",
       },
     } satisfies ImageSlot,
   },
@@ -34,23 +33,6 @@ export const exhibitions = {
       "We consider who will attend, the environment, the purpose of the gathering and the conversation the organization hopes to create.",
       "From there, UGO N & Co. develops an exhibition concept and works with appropriate artists, galleries, studios and cultural partners to identify works that support that vision.",
     ],
-  },
-  why: {
-    eyebrow: "Why African Contemporary Art?",
-    statement:
-      "African contemporary art represents an extraordinary range of artistic practices, perspectives, geographies and cultural histories.",
-    body: [
-      "UGO N & Co. creates opportunities for corporate and private audiences to encounter these artists in more intimate settings, outside of the traditional gallery, museum or art-fair environment.",
-      "Our role is not to present African contemporary art as a single aesthetic or narrative.",
-    ],
-    closing: "Instead, each exhibition is developed around individual artistic practices and a clear curatorial idea.",
-    image: {
-      label: "Image · Artwork detail",
-      image: {
-        src: exhibitionsDetailPhoto,
-        alt: "A visitor in a flat cap looking at a large, colorful abstract painting in a gallery",
-      },
-    } satisfies ImageSlot,
   },
   experiences: {
     eyebrow: "Private Client Experiences",
