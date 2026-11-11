@@ -70,7 +70,7 @@ export default function PrivateArtPage() {
 
       <Section innerClassName="flex flex-wrap items-center gap-x-24 gap-y-14">
         <div className="min-w-0 flex-[1_1_440px]" {...reveal(0)}>
-          <ImageFrame slot={ovico.image} aspect="4/3" />
+          <ImageFrame slot={ovico.image} aspect="4/5" />
         </div>
         <div className="flex min-w-0 flex-[1_1_440px] flex-col gap-[22px]" {...reveal(1)}>
           <Eyebrow>{ovico.eyebrow}</Eyebrow>

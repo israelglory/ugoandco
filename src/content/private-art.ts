@@ -1,3 +1,4 @@
+import ovicoPhoto from "@/assets/images/ovico-ugochi.jpg";
 import { placeholderImages } from "./placeholder-images";
 import type { ImageSlot, PageMeta, RichHeading } from "./types";
 
@@ -61,6 +62,13 @@ export const privateArt = {
       "Where appropriate, Ovico Gallery may participate in a UGO N & Co. exhibition or art engagement alongside other galleries, artists and cultural partners.",
     ],
     linkLabel: "Visit Ovico Gallery",
-    image: { label: "Image · Ovico Gallery", image: placeholderImages.ovicoGallery } satisfies ImageSlot,
+    image: {
+      label: "Image · Ovico Gallery",
+      image: {
+        src: ovicoPhoto,
+        alt: "Ugochi D. Nwoga standing in front of a bright abstract painting of colored squares",
+        position: "50% 0%",
+      },
+    } satisfies ImageSlot,
   },
 };
