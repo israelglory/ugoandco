@@ -1,5 +1,6 @@
+import corporateBoardroom from "@/assets/images/corporate-boardroom.jpg";
 import { routes } from "./site";
-import type { PageMeta, RichHeading } from "./types";
+import type { ImageSlot, PageMeta, RichHeading } from "./types";
 
 export const corporateMeta: PageMeta = {
   title: "Corporate Finance & Strategy",
@@ -23,6 +24,15 @@ export const corporate = {
       { numeral: "iii.", label: "Project-based" },
     ],
   },
+  /* Wide image under the hero. Set to null to remove the band from the page. */
+  banner: {
+    label: "Image · Luxury Executive Boardroom at Sunset",
+    image: {
+      src: corporateBoardroom,
+      alt: "An executive boardroom with a long marble table and leather chairs, floor-to-ceiling windows overlooking a city skyline at sunset",
+      position: "50% 55%",
+    },
+  } as ImageSlot | null,
   services: [
     {
       numeral: "01",

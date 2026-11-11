@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/Button";
 import { GoldRing } from "@/components/ui/GoldRing";
+import { ImageFrame } from "@/components/ui/ImageFrame";
 import { NumberedItem } from "@/components/ui/NumberedItem";
 import { RuledList } from "@/components/ui/RuledList";
 import { Section } from "@/components/ui/Section";
@@ -12,7 +13,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata = pageMetadata(corporateMeta, routes.corporate);
 
 export default function CorporatePage() {
-  const { hero, services, international, approach } = corporate;
+  const { hero, banner, services, international, approach } = corporate;
 
   return (
     <>
@@ -42,6 +43,7 @@ export default function CorporatePage() {
             ))}
           </ul>
         </div>
+        {banner && <ImageFrame slot={banner} aspect="band" sizes="(max-width: 1320px) 100vw, 1240px" />}
       </Section>
 
       <Section

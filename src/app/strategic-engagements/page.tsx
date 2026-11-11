@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/Button";
 import { Chip, Notice, Panel } from "@/components/ui/Cards";
 import { GoldRing } from "@/components/ui/GoldRing";
+import { ImageFrame } from "@/components/ui/ImageFrame";
 import { Section } from "@/components/ui/Section";
 import { Body, Eyebrow, Heading, Lede } from "@/components/ui/Typography";
 import { routes } from "@/content/site";
@@ -11,7 +12,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata = pageMetadata(strategicMeta, routes.strategic);
 
 export default function StrategicEngagementsPage() {
-  const { hero, selective, panels, transactions } = strategic;
+  const { hero, banner, selective, panels, transactions } = strategic;
 
   return (
     <>
@@ -32,6 +33,7 @@ export default function StrategicEngagementsPage() {
           <Lede className="min-w-0 flex-[1_1_420px]">{hero.lede}</Lede>
           <Body className="min-w-0 flex-[1_1_480px]">{hero.body}</Body>
         </div>
+        {banner && <ImageFrame slot={banner} aspect="band" sizes="(max-width: 1320px) 100vw, 1240px" />}
       </Section>
 
       <Section variant="ink" pt={112} pb={112} innerClassName="flex flex-wrap items-center gap-x-24 gap-y-12">

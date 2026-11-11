@@ -1,5 +1,6 @@
+import strategicLounge from "@/assets/images/strategic-lounge.jpg";
 import { routes } from "./site";
-import type { PageMeta, RichHeading } from "./types";
+import type { ImageSlot, PageMeta, RichHeading } from "./types";
 
 export const strategicMeta: PageMeta = {
   title: "Strategic Engagements",
@@ -17,6 +18,15 @@ export const strategic = {
     lede: "Not every business opportunity fits neatly within a traditional consulting engagement.",
     body: "UGO N & Co. accepts select projects where our corporate experience, international perspective, relationships or ability to bring parties together can help advance a clearly defined objective.",
   },
+  /* Wide image under the hero. Set to null to remove the band from the page. */
+  banner: {
+    label: "Image · Global Executive Lounge at Sunset",
+    image: {
+      src: strategicLounge,
+      alt: "An executive lounge with floor-to-ceiling windows over a city skyline at sunset, a gold world map on the wall and a gold globe on a marble table",
+      position: "50% 60%",
+    },
+  } as ImageSlot | null,
   selective: {
     title: "These engagements are intentionally selective.",
     body: "We focus on opportunities where our experience, international perspective and relevant relationships can contribute meaningfully to a clearly defined objective.",

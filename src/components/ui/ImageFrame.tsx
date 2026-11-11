@@ -7,6 +7,8 @@ const aspects = {
   "3/4": "aspect-[3/4]",
   "5/6": "aspect-[5/6]",
   "4/3": "aspect-[4/3]",
+  /** Wide banner: 3:2 on phones, 21:9 from 768px. */
+  band: "aspect-[3/2] min-[768px]:aspect-[21/9]",
 } as const;
 
 type ImageFrameProps = {
