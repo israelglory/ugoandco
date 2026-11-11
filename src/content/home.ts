@@ -39,7 +39,7 @@ export const home = {
     eyebrow: "What We Do",
     title: { text: "Experience. Relationships. Execution.", accent: "Execution." } satisfies RichHeading,
     intro: [
-      "UGO N & Co. brings together corporate leadership experience, entrepreneurial perspective, international relationships and relationships across the African contemporary art ecosystem.",
+      "UGO N & Co. brings together corporate leadership experience, entrepreneurial perspective, international reach and established relationships across the African contemporary art ecosystem.",
     ],
     introStrong: "Our work is organized around four areas.",
     services: [
