@@ -112,7 +112,7 @@ The two banners are optional: set `banner` to `null` to remove the band from the
 
 ## Ovico Gallery link
 
-Set `OVICO_URL` in [`src/lib/config.ts`](src/lib/config.ts). Until it is set, every "Visit Ovico Gallery" control renders as a plain label rather than a dead link. Once set, the links open in a new tab with `rel="noopener noreferrer"`.
+`OVICO_URL` in [`src/lib/config.ts`](src/lib/config.ts) is set to https://ovicogallery.com/. Every "Visit Ovico Gallery" link (Private Art Acquisitions page and footer) opens it in a new tab with `rel="noopener noreferrer"`.
 
 ## Deploying
 

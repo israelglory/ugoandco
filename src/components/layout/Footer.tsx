@@ -40,14 +40,10 @@ export function Footer() {
               {footer.ovico.title}
             </Eyebrow>
             <p className="m-0 font-sans text-[14px] leading-[1.8] text-on-dark-muted">{footer.ovico.text}</p>
-            {OVICO_URL ? (
-              <a href={OVICO_URL} target="_blank" rel="noopener noreferrer" className={ovicoLinkClass}>
-                {footer.ovico.linkLabel}
-                <span className="sr-only"> {site.externalLinkHint}</span>
-              </a>
-            ) : (
-              <span className={ovicoLinkClass}>{footer.ovico.linkLabel}</span>
-            )}
+            <a href={OVICO_URL} target="_blank" rel="noopener noreferrer" className={ovicoLinkClass}>
+              {footer.ovico.linkLabel}
+              <span className="sr-only"> {site.externalLinkHint}</span>
+            </a>
           </div>
         </div>
 

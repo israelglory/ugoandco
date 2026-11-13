@@ -61,6 +61,17 @@ test("no em dashes in rendered text", async ({ page }) => {
   }
 });
 
+test("Visit Ovico Gallery links open ovicogallery.com in a new tab", async ({ page }) => {
+  await open(page, "/private-art");
+  const links = page.getByRole("link", { name: /Visit Ovico Gallery/ });
+  await expect(links).toHaveCount(2); // page section and footer
+  for (const link of await links.all()) {
+    await expect(link).toHaveAttribute("href", "https://ovicogallery.com/");
+    await expect(link).toHaveAttribute("target", "_blank");
+    await expect(link).toHaveAttribute("rel", "noopener noreferrer");
+  }
+});
+
 test("header shrinks from 92px to 76px after scrolling", async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await open(page, "/");
